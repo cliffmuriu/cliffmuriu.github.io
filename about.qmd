@@ -1,27 +1,59 @@
 ---
-title: "About me"
+title: "About Me"
+about:
+  template: trestles
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/cliffmuriu
+    - icon: envelope
+      text: Email
+      href: mailto:cliffmuriu01@gmail.com
+    - icon: whatsapp
+      text: WhatsApp
+      href: https://wa.me/254742950424
 ---
 
-### Hi, I am Cliff Muriu
+## Who I Am
 
-I am a student passionate about Data Science, Statistics and Technology.
+My name is **Cliff Muriu**, a **BSc. Statistics** student at **Kirinyaga University**, passionate about using data to solve real-world problems in business, agriculture, and economics.
 
-#### Education
+I grew up curious — always asking *why* behind the numbers. That curiosity led me to statistics, where I found a powerful way to turn questions into insights.
 
-- \[Add your Course, e.g. BSc Statistics and Programming\]
-- \[Your University\]
-- \[Year of Study\]
+I am based in **Kutus, Kirinyaga County, Kenya**.
 
-#### Skills
+### 🎓 Education
 
-- R Programming, Data Analysis & Visualization
-- Quarto Websites, Git & GitHub
-- Problem solving and teamwork
+**Bachelor of Science in Statistics** *Kirinyaga University*
 
-#### Interests
+Relevant Coursework: Probability & Statistics, Statistical Programming (R), Data Analysis, Design of Experiments, Biostatistics, Econometrics, Machine Learning Concepts.
 
-Technology, Agriculture data, Football, Learning new tools.
+**Why Statistics?** I believe data is the language of the future, and I want to be fluent in it — helping organizations make smarter, evidence-based decisions.
 
-#### Contact
+### 💡 What Drives Me
 
-Email: cliffmuriu\@gmail.com GitHub: @cliffke
+- **Curiosity:** I love digging into datasets to find the hidden story.
+- **Impact:** I want my work to help small businesses and farmers in Kenya use their data better.
+- **Continuous Learning:** Currently teaching myself advanced Python, Power BI, and predictive modeling beyond class work.
+
+### 🛠️ Skills
+
+**Technical:** R (Tidyverse, ggplot2, RMarkdown), Excel (Advanced), Quarto, Git/GitHub, Statistics & Hypothesis Testing
+
+**Soft Skills:** Critical Thinking, Problem Solving, Communication, Teamwork, Attention to Detail
+
+**Languages:** English, Swahili, Kikuyu
+
+### 🎯 Career Goal
+
+My short-term goal is to secure an attachment / internship as a **Data Analyst** where I can apply my statistical skills. Long-term, I aim to become a **Data Scientist** specializing in Business Intelligence and Agricultural Analytics for the Kenyan market.
+
+### Outside Data
+
+When I'm not coding in RStudio, you can find me exploring new tech tools or helping peers with statistics assignments.
+
+------------------------------------------------------------------------
+
+**Let's build something with data.**
+
+> I am currently available for freelance data cleaning, visualization, and student project support.

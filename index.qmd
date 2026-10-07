@@ -1,23 +1,56 @@
 ---
----
 title: "Cliff Muriu"
+subtitle: "Data Analyst| Business Insights"
 about:
   template: trestles
   links:
     - icon: github
-      text: Github
-      href: https://github.com/cliffke1
+      text: GitHub
+      href: https://github.com/cliffmuriu
+    - icon: envelope
+      text: Email
+      href: mailto:cliffmuriu01@gmmail.com
     - icon: whatsapp
       text: WhatsApp
       href: https://wa.me/254742950424
 ---
 
-## Welcome to My Portfolio
+## Hello, I'm Cliff Muriu
 
-This is my personal Quarto website created for CAT 2.
+I am a data enthusiast based in Kenya, passionate about turning raw data into clear business decisions. I build dashboards, analyze trends and tell stories with data using **R, and Excel.**
 
-This website showcases who I am, what I do, and the projects I have completed, including my CAT 1 data analysis.
+> "Data is not just numbers — it's answers waiting to be discovered."
 
-**On this site:** - Home: Overview of the site - About: Details about me - Projects: Sample projects done (CAT 1)
+### What I Do
 
-Built with Quarto, R, and hosted on GitHub Pages.
+**📊 Data Analysis & Visualization** I clean, analyze, and visualize datasets to uncover patterns using R (Tidyverse, ggplot2) .
+
+**📈 Business Intelligence** Building interactive dashboards and reports that help businesses track performance and make data-driven decisions.
+
+**🤖 Learning & Growing** Currently expanding into Machine Learning and Predictive Analytics for real-world problem solving.
+
+### Featured Projects
+
++----------------------------------+-------------------+----------------------------------+
+| Project                          | Tools             | Link                             |
++==================================+===================+==================================+
+| **Analysis of maize production** | R, ggplot2, dplyr | [View Project](cat1-project.qmd) |
+|                                  |                   |                                  |
+| **in kenya across 47 counties**  |                   |                                  |
++----------------------------------+-------------------+----------------------------------+
+
+### Tech Stack
+
+`R` `Python` `Excel` `Quarto` `Git & GitHub` `ggplot2` `Tidyverse` `Power BI`
+
+### Let's Connect
+
+I am open to internships, freelance data projects, and collaborations.
+
+**Have data that needs a story? Let's talk.**
+
+[Download My CV](files/CV_Cliff_Muriu.pdf) \| [Email Me](mailto:cliffmuriu@email.com)
+
+------------------------------------------------------------------------
+
+*This site was built with Quarto and hosted on GitHub Pages. Last updated: 07/10/2026*

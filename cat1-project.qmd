@@ -1,0 +1,147 @@
+---
+title: "Maize Production Analysis Across 47 Counties in Kenya (2022)"
+description: "Statistical analysis of 2022 maize data: Rift Valley vs Non-Rift production, rainfall-yield relationship, and multiple regression modeling."
+date: "2026-05-10"
+categories: [R, Kenya, Agriculture, Regression]
+---
+
+## Overview
+
+**Objective:** To analyze 2022 maize production across all 47 counties to answer three research questions for CAT 1.
+
+**Dataset:** `kenya_maize_2022.xlsx` - 47 rows (counties), 6 columns Variables: `county`, `area_planted_ha`, `production_bags_90kg`, `yield_bags_per_ha`, `rainfall_mm`, `fertilizer_used_tons`
+
+### Tools
+
+`readxl` `ggplot2` `dplyr` `tidyr`
+
+### Data Loading & Checking
+
+```{r}
+#| eval: false 
+#| echo: true 
+library(readxl)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+```
+
+# Load dataset - USE RELATIVE PATH FOR WEBSITE
+
+```{r}
+#| eval: false 
+kenya_maize_2022 <- read_excel("files/kenya_maize_2022-1.xlsx")
+df <- kenya_maize_2022
+```
+
+# Check structure - should be 47 rows, 6 cols
+
+```{r}
+#| echo: false
+#| eval: false
+str(df)
+summary(df)
+sum(is.na(df))
+```
+
+## Question 1: Is Rift Valley Production Higher?
+
+```{r}
+#| echo: false
+library(readxl) 
+library(ggplot2) 
+library(dplyr) 
+library(tidyr) 
+#loading dataset 
+kenya_maize_2022 <- read_excel("files/kenya_maize_2022-1.xlsx")
+df <- kenya_maize_2022 
+rift_counties <- c("Trans Nzoia","Uasin Gishu","Nakuru","Narok","Nandi",
+                   "Baringo","Elgeyo-Marakwet","Kericho","Bomet",
+                   "Laikipia","Kajiado","West Pokot")
+
+df$is_rift <- ifelse(df$county %in% rift_counties, "Rift","Non-Rift")
+aggregate(production_bags_90kg ~ is_rift, data=df, mean)
+t.test(production_bags_90kg ~ is_rift, data=df)
+
+```
+
+```{r}
+#| echo: false
+# Bar graph for all 47 counties
+ggplot(df, aes(x=reorder(county, production_bags_90kg), 
+               y=production_bags_90kg, fill=is_rift)) + 
+  geom_col() +
+  coord_flip() + 
+  labs(title="Maize Production: Rift vs Non-Rift (All 47 Counties)", 
+       x="County", y="Production (90kg bags)")
+
+# Top 15 Producers
+df_top <- df %>% arrange(desc(production_bags_90kg)) %>% head(15)
+ggplot(df_top, aes(x=reorder(county, production_bags_90kg), 
+                   y=production_bags_90kg, fill=is_rift)) +
+  geom_col(width = 0.6) +
+  coord_flip() +
+  labs(title="Top 15 Producers: Rift vs Non-Rift", 
+       x="County", y="Production (90kg bags)")
+```
+
+**Findings**: Rift Valley counties have significantly higher mean production (t-test p \< 0.05). Trans Nzoia, Uasin Gishu, Nakuru dominate.
+
+## Question 2: Relationship Between Rainfall and Yield
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+cor.test(df$rainfall_mm, df$yield_bags_per_ha)
+model_yield <- lm(yield_bags_per_ha ~ rainfall_mm, data=df)
+summary(model_yield)
+
+ggplot(df, aes(x=rainfall_mm, y=yield_bags_per_ha)) +
+  geom_point(size=2) +
+  geom_smooth(method="lm", se=FALSE, color="red") +
+  labs(title="Rainfall vs Yield - Strong Positive Relationship",
+       x="Rainfall (mm)", y="Yield (bags per ha)")
+```
+
+**Result from analysis**:
+
+Correlation r = 0.776 (strong positive)
+
+Slope = 0.0169 (for every 1mm increase in rainfall, yield increases by 0.0169 bags/ha)
+
+R² = 0.603 -\> Rainfall explains 60.3% of variation in yield.
+
+This is a key finding for food security policy.
+
+## Question 3: Multiple Regression Models
+
+```{r}
+#| echo: false
+# Model 1: What drives total production?
+model_prod <- lm(production_bags_90kg ~ area_planted_ha + rainfall_mm + 
+                   fertilizer_used_tons, data=df)
+summary(model_prod)
+
+# Model 2: What drives yield per hectare?
+model_yield_fert <- lm(yield_bags_per_ha ~ rainfall_mm + fertilizer_used_tons, 
+                       data=df)
+summary(model_yield_fert)
+```
+
+These models show the combined effect of area, rainfall, and fertilizer - critical for government subsidy planning.
+
+**Conclusion & Recommendations**
+
+Rift Valley remains Kenya's breadbasket - prioritize storage infrastructure there.
+
+Rainfall is the biggest driver of yield (60% explained) - invest in irrigation for low-rainfall counties.
+
+Fertilizer use should be analyzed further for yield gap closure.
+
+**Files**
+
+::: {.callout-note title="Download Project Files"}
+- <a href="files/Maize_Production_CAT1.pdf" download>📄 Download Full Report (PDF)</a>
+- <a href="files/kenya_maize_2022-1.xlsx" download>📊 Download Dataset (Excel - 47 Counties)</a>
+:::

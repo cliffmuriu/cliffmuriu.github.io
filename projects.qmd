@@ -1,20 +1,17 @@
 ---
 title: "Projects"
+listing:
+  contents: 
+    - cat1-project.qmd
+    - customer-segmentation.qmd
+    - dashboard.qmd
+  sort: "date desc"
+  type: grid
+  categories: true
 ---
 
-## Projects Done
+Welcome to my project portfolio. Here I document my journey from classroom statistics to real-world data analysis.
 
-### 1. CAT 1 - Kenya Maize Production Analysis (2022)
+Each project includes the problem, my approach, tools used, and key insights.
 
-Tools: R, ggplot2, Tidyverse
-
-- Compared Rift Valley vs Non-Rift production using t-test
-- Modelled yield vs rainfall: R² = 60.3%
-- Multiple regression: area drives total bags, rainfall + fertilizer drives yield
-- Visualization: Top 15 maize producing counties bar chart
-
-### 2. Portfolio Website - CAT 2
-
-Built this Quarto website hosted on GitHub Pages.
-
-More projects coming soon.
+> All code is available on my [GitHub](https://github.com/cliffmuriu).

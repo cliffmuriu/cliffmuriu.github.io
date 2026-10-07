@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - files/*
 
 website:
   title: "Cliff Muriu"
@@ -14,7 +16,7 @@ website:
         text: Projects
     right:
       - icon: github
-        href: https://github.com/cliffke1
+        href: https://github.com/cliffmuriu
       - icon: whatsapp
         href: https://wa.me/254742950424
 

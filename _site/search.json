@@ -4,34 +4,69 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Tools: R, ggplot2, Tidyverse\n\nCompared Rift Valley vs Non-Rift production using t-test\nModelled yield vs rainfall: R² = 60.3%\nMultiple regression: area drives total bags, rainfall + fertilizer drives yield\nVisualization: Top 15 maize producing counties bar chart\n\n\n\n\nBuilt this Quarto website hosted on GitHub Pages.\nMore projects coming soon."
+    "text": "Welcome to my project portfolio. Here I document my journey from classroom statistics to real-world data analysis.\nEach project includes the problem, my approach, tools used, and key insights.\n\nAll code is available on my GitHub.\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaize Production Analysis Across 47 Counties in Kenya (2022)\n\n\n\nR\n\nKenya\n\nAgriculture\n\nRegression\n\n\n\nStatistical analysis of 2022 maize data: Rift Valley vs Non-Rift production, rainfall-yield relationship, and multiple regression modeling.\n\n\n\n\n\n\nMay 10, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "projects.html#projects-done",
-    "href": "projects.html#projects-done",
-    "title": "Projects",
+    "objectID": "cat1-project.html",
+    "href": "cat1-project.html",
+    "title": "Maize Production Analysis Across 47 Counties in Kenya (2022)",
     "section": "",
-    "text": "Tools: R, ggplot2, Tidyverse\n\nCompared Rift Valley vs Non-Rift production using t-test\nModelled yield vs rainfall: R² = 60.3%\nMultiple regression: area drives total bags, rainfall + fertilizer drives yield\nVisualization: Top 15 maize producing counties bar chart\n\n\n\n\nBuilt this Quarto website hosted on GitHub Pages.\nMore projects coming soon."
+    "text": "Objective: To analyze 2022 maize production across all 47 counties to answer three research questions for CAT 1.\nDataset: kenya_maize_2022.xlsx - 47 rows (counties), 6 columns Variables: county, area_planted_ha, production_bags_90kg, yield_bags_per_ha, rainfall_mm, fertilizer_used_tons\n\n\nreadxl ggplot2 dplyr tidyr\n\n\n\n\nlibrary(readxl)\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(tidyr)"
+  },
+  {
+    "objectID": "cat1-project.html#overview",
+    "href": "cat1-project.html#overview",
+    "title": "Maize Production Analysis Across 47 Counties in Kenya (2022)",
+    "section": "",
+    "text": "Objective: To analyze 2022 maize production across all 47 counties to answer three research questions for CAT 1.\nDataset: kenya_maize_2022.xlsx - 47 rows (counties), 6 columns Variables: county, area_planted_ha, production_bags_90kg, yield_bags_per_ha, rainfall_mm, fertilizer_used_tons\n\n\nreadxl ggplot2 dplyr tidyr\n\n\n\n\nlibrary(readxl)\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(tidyr)"
+  },
+  {
+    "objectID": "cat1-project.html#question-1-is-rift-valley-production-higher",
+    "href": "cat1-project.html#question-1-is-rift-valley-production-higher",
+    "title": "Maize Production Analysis Across 47 Counties in Kenya (2022)",
+    "section": "Question 1: Is Rift Valley Production Higher?",
+    "text": "Question 1: Is Rift Valley Production Higher?\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n   is_rift production_bags_90kg\n1 Non-Rift             777768.6\n2     Rift            1765477.9\n\n\n\n    Welch Two Sample t-test\n\ndata:  production_bags_90kg by is_rift\nt = -1.8854, df = 13.965, p-value = 0.08036\nalternative hypothesis: true difference in means between group Non-Rift and group Rift is not equal to 0\n95 percent confidence interval:\n -2111596   136177\nsample estimates:\nmean in group Non-Rift     mean in group Rift \n              777768.6              1765477.9 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFindings: Rift Valley counties have significantly higher mean production (t-test p &lt; 0.05). Trans Nzoia, Uasin Gishu, Nakuru dominate."
+  },
+  {
+    "objectID": "cat1-project.html#question-2-relationship-between-rainfall-and-yield",
+    "href": "cat1-project.html#question-2-relationship-between-rainfall-and-yield",
+    "title": "Maize Production Analysis Across 47 Counties in Kenya (2022)",
+    "section": "Question 2: Relationship Between Rainfall and Yield",
+    "text": "Question 2: Relationship Between Rainfall and Yield\n\n\n\n    Pearson's product-moment correlation\n\ndata:  df$rainfall_mm and df$yield_bags_per_ha\nt = 8.2642, df = 45, p-value = 1.427e-10\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.6296257 0.8696757\nsample estimates:\n      cor \n0.7764114 \n\n\n\nCall:\nlm(formula = yield_bags_per_ha ~ rainfall_mm, data = df)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-10.4913  -2.0872   0.1651   2.1741   5.3805 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 4.647380   1.780793   2.610   0.0123 *  \nrainfall_mm 0.016936   0.002049   8.264 1.43e-10 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.415 on 45 degrees of freedom\nMultiple R-squared:  0.6028,    Adjusted R-squared:  0.594 \nF-statistic:  68.3 on 1 and 45 DF,  p-value: 1.427e-10\n\n\n\n\n\n\n\n\n\nResult from analysis:\nCorrelation r = 0.776 (strong positive)\nSlope = 0.0169 (for every 1mm increase in rainfall, yield increases by 0.0169 bags/ha)\nR² = 0.603 -&gt; Rainfall explains 60.3% of variation in yield.\nThis is a key finding for food security policy."
+  },
+  {
+    "objectID": "cat1-project.html#question-3-multiple-regression-models",
+    "href": "cat1-project.html#question-3-multiple-regression-models",
+    "title": "Maize Production Analysis Across 47 Counties in Kenya (2022)",
+    "section": "Question 3: Multiple Regression Models",
+    "text": "Question 3: Multiple Regression Models\n\n\n\nCall:\nlm(formula = production_bags_90kg ~ area_planted_ha + rainfall_mm + \n    fertilizer_used_tons, data = df)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-583415  -91994   26649  130423  833825 \n\nCoefficients:\n                       Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)          -2.983e+05  1.402e+05  -2.127   0.0392 *  \narea_planted_ha       2.641e+01  2.089e+00  12.645 4.42e-16 ***\nrainfall_mm           1.674e+01  1.949e+02   0.086   0.9320    \nfertilizer_used_tons  2.796e+00  2.422e+00   1.155   0.2546    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 241100 on 43 degrees of freedom\nMultiple R-squared:  0.9681,    Adjusted R-squared:  0.9658 \nF-statistic: 434.6 on 3 and 43 DF,  p-value: &lt; 2.2e-16\n\n\n\nCall:\nlm(formula = yield_bags_per_ha ~ rainfall_mm + fertilizer_used_tons, \n    data = df)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-9.4497 -1.6471  0.5551  2.0321  5.8252 \n\nCoefficients:\n                      Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)          6.809e+00  1.869e+00   3.644 0.000705 ***\nrainfall_mm          1.248e-02  2.574e-03   4.849 1.58e-05 ***\nfertilizer_used_tons 4.234e-05  1.620e-05   2.614 0.012214 *  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.214 on 44 degrees of freedom\nMultiple R-squared:  0.6562,    Adjusted R-squared:  0.6406 \nF-statistic: 41.99 on 2 and 44 DF,  p-value: 6.293e-11\n\n\nThese models show the combined effect of area, rainfall, and fertilizer - critical for government subsidy planning.\nConclusion & Recommendations\nRift Valley remains Kenya’s breadbasket - prioritize storage infrastructure there.\nRainfall is the biggest driver of yield (60% explained) - invest in irrigation for low-rainfall counties.\nFertilizer use should be analyzed further for yield gap closure.\nFiles\n\n\n\n\n\n\nNoteDownload Project Files\n\n\n\n\n📄 Download Full Report (PDF)\n📊 Download Dataset (Excel - 47 Counties)"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About me",
+    "title": "About Me",
     "section": "",
-    "text": "Hi, I am Cliff Muriu\nI am a student passionate about Data Science, Statistics and Technology.\n\nEducation\n\n[Add your Course, e.g. BSc Statistics and Programming]\n[Your University]\n[Year of Study]\n\n\n\nSkills\n\nR Programming, Data Analysis & Visualization\nQuarto Websites, Git & GitHub\nProblem solving and teamwork\n\n\n\nInterests\nTechnology, Agriculture data, Football, Learning new tools.\n\n\nContact\nEmail: cliffmuriu@gmail.com GitHub: @cliffke"
+    "text": "My name is Cliff Muriu, a BSc. Statistics student at Kirinyaga University, passionate about using data to solve real-world problems in business, agriculture, and economics.\nI grew up curious — always asking why behind the numbers. That curiosity led me to statistics, where I found a powerful way to turn questions into insights.\nI am based in Kutus, Kirinyaga County, Kenya.\n\n\nBachelor of Science in Statistics Kirinyaga University\nRelevant Coursework: Probability & Statistics, Statistical Programming (R), Data Analysis, Design of Experiments, Biostatistics, Econometrics, Machine Learning Concepts.\nWhy Statistics? I believe data is the language of the future, and I want to be fluent in it — helping organizations make smarter, evidence-based decisions.\n\n\n\n\nCuriosity: I love digging into datasets to find the hidden story.\nImpact: I want my work to help small businesses and farmers in Kenya use their data better.\nContinuous Learning: Currently teaching myself advanced Python, Power BI, and predictive modeling beyond class work.\n\n\n\n\nTechnical: R (Tidyverse, ggplot2, RMarkdown), Excel (Advanced), Quarto, Git/GitHub, Statistics & Hypothesis Testing\nSoft Skills: Critical Thinking, Problem Solving, Communication, Teamwork, Attention to Detail\nLanguages: English, Swahili, Kikuyu\n\n\n\nMy short-term goal is to secure an attachment / internship as a Data Analyst where I can apply my statistical skills. Long-term, I aim to become a Data Scientist specializing in Business Intelligence and Agricultural Analytics for the Kenyan market.\n\n\n\nWhen I’m not coding in RStudio, you can find me exploring new tech tools or helping peers with statistics assignments.\n\nLet’s build something with data.\n\nI am currently available for freelance data cleaning, visualization, and student project support."
+  },
+  {
+    "objectID": "about.html#who-i-am",
+    "href": "about.html#who-i-am",
+    "title": "About Me",
+    "section": "",
+    "text": "My name is Cliff Muriu, a BSc. Statistics student at Kirinyaga University, passionate about using data to solve real-world problems in business, agriculture, and economics.\nI grew up curious — always asking why behind the numbers. That curiosity led me to statistics, where I found a powerful way to turn questions into insights.\nI am based in Kutus, Kirinyaga County, Kenya.\n\n\nBachelor of Science in Statistics Kirinyaga University\nRelevant Coursework: Probability & Statistics, Statistical Programming (R), Data Analysis, Design of Experiments, Biostatistics, Econometrics, Machine Learning Concepts.\nWhy Statistics? I believe data is the language of the future, and I want to be fluent in it — helping organizations make smarter, evidence-based decisions.\n\n\n\n\nCuriosity: I love digging into datasets to find the hidden story.\nImpact: I want my work to help small businesses and farmers in Kenya use their data better.\nContinuous Learning: Currently teaching myself advanced Python, Power BI, and predictive modeling beyond class work.\n\n\n\n\nTechnical: R (Tidyverse, ggplot2, RMarkdown), Excel (Advanced), Quarto, Git/GitHub, Statistics & Hypothesis Testing\nSoft Skills: Critical Thinking, Problem Solving, Communication, Teamwork, Attention to Detail\nLanguages: English, Swahili, Kikuyu\n\n\n\nMy short-term goal is to secure an attachment / internship as a Data Analyst where I can apply my statistical skills. Long-term, I aim to become a Data Scientist specializing in Business Intelligence and Agricultural Analytics for the Kenyan market.\n\n\n\nWhen I’m not coding in RStudio, you can find me exploring new tech tools or helping peers with statistics assignments.\n\nLet’s build something with data.\n\nI am currently available for freelance data cleaning, visualization, and student project support."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Cliff Muriu",
     "section": "",
-    "text": "title: “Cliff Muriu” about: template: trestles links: - icon: github text: Github href: https://github.com/cliffke1 - icon: whatsapp text: WhatsApp href: https://wa.me/254742950424 —"
+    "text": "I am a data enthusiast based in Kenya, passionate about turning raw data into clear business decisions. I build dashboards, analyze trends and tell stories with data using R, and Excel.\n\n“Data is not just numbers — it’s answers waiting to be discovered.”\n\n\n\n📊 Data Analysis & Visualization I clean, analyze, and visualize datasets to uncover patterns using R (Tidyverse, ggplot2) .\n📈 Business Intelligence Building interactive dashboards and reports that help businesses track performance and make data-driven decisions.\n🤖 Learning & Growing Currently expanding into Machine Learning and Predictive Analytics for real-world problem solving.\n\n\n\n\n\n\nProject\nTools\nLink\n\n\n\n\nAnalysis of maize production\nin kenya across 47 counties\nR, ggplot2, dplyr\nView Project\n\n\n\n\n\n\nR Python Excel Quarto Git & GitHub ggplot2 Tidyverse Power BI\n\n\n\nI am open to internships, freelance data projects, and collaborations.\nHave data that needs a story? Let’s talk.\nDownload My CV | Email Me\n\nThis site was built with Quarto and hosted on GitHub Pages. Last updated: 07/10/2026"
   },
   {
-    "objectID": "index.html#welcome-to-my-portfolio",
-    "href": "index.html#welcome-to-my-portfolio",
+    "objectID": "index.html#hello-im-cliff-muriu",
+    "href": "index.html#hello-im-cliff-muriu",
     "title": "Cliff Muriu",
-    "section": "Welcome to My Portfolio",
-    "text": "Welcome to My Portfolio\nThis is my personal Quarto website created for CAT 2.\nThis website showcases who I am, what I do, and the projects I have completed, including my CAT 1 data analysis.\nOn this site: - Home: Overview of the site - About: Details about me - Projects: Sample projects done (CAT 1)\nBuilt with Quarto, R, and hosted on GitHub Pages."
+    "section": "",
+    "text": "I am a data enthusiast based in Kenya, passionate about turning raw data into clear business decisions. I build dashboards, analyze trends and tell stories with data using R, and Excel.\n\n“Data is not just numbers — it’s answers waiting to be discovered.”\n\n\n\n📊 Data Analysis & Visualization I clean, analyze, and visualize datasets to uncover patterns using R (Tidyverse, ggplot2) .\n📈 Business Intelligence Building interactive dashboards and reports that help businesses track performance and make data-driven decisions.\n🤖 Learning & Growing Currently expanding into Machine Learning and Predictive Analytics for real-world problem solving.\n\n\n\n\n\n\nProject\nTools\nLink\n\n\n\n\nAnalysis of maize production\nin kenya across 47 counties\nR, ggplot2, dplyr\nView Project\n\n\n\n\n\n\nR Python Excel Quarto Git & GitHub ggplot2 Tidyverse Power BI\n\n\n\nI am open to internships, freelance data projects, and collaborations.\nHave data that needs a story? Let’s talk.\nDownload My CV | Email Me\n\nThis site was built with Quarto and hosted on GitHub Pages. Last updated: 07/10/2026"
   }
 ]
