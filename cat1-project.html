@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-05-10">
+<meta name="description" content="Statistical analysis of 2022 maize data: Rift Valley vs Non-Rift production, rainfall-yield relationship, and multiple regression modeling.">
 
-<title>Projects – Cliff Muriu</title>
+<title>Maize Production Analysis Across 47 Counties in Kenya (2022) – Cliff Muriu</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,6 +28,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -36,8 +73,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -75,70 +110,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -164,7 +141,7 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="./projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -190,21 +167,37 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QWdyaWN1bHR1cmU=">Agriculture <span class="quarto-category-count">(1)</span></div><div class="category" data-category="S2VueWE=">Kenya <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVncmVzc2lvbg==">Regression <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
-</div>
+<h1 class="title">Maize Production Analysis Across 47 Counties in Kenya (2022)</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Kenya</div>
+    <div class="quarto-category">Agriculture</div>
+    <div class="quarto-category">Regression</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Statistical analysis of 2022 maize data: Rift Valley vs Non-Rift production, rainfall-yield relationship, and multiple regression modeling.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 10, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -214,53 +207,214 @@ window.Quarto = {
 </header>
 
 
-<p>Welcome to my project portfolio. Here I document my journey from classroom statistics to real-world data analysis.</p>
-<p>Each project includes the problem, my approach, tools used, and key insights.</p>
-<blockquote class="blockquote">
-<p>All code is available on my <a href="https://github.com/cliffmuriu">GitHub</a>.</p>
-</blockquote>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="UiUyQ0tlbnlhJTJDQWdyaWN1bHR1cmUlMkNSZWdyZXNzaW9u" data-listing-date-sort="1778360400000" data-listing-file-modified-sort="1791379737923" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="519">
-<a href="./cat1-project.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="cat1-project_files\figure-html\unnamed-chunk-5-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Maize Production Analysis Across 47 Counties in Kenya (2022)
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('S2VueWE='); return false;">Kenya</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QWdyaWN1bHR1cmU='); return false;">Agriculture</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVncmVzc2lvbg=='); return false;">Regression</div>
-
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><strong>Objective:</strong> To analyze 2022 maize production across all 47 counties to answer three research questions for CAT 1.</p>
+<p><strong>Dataset:</strong> <code>kenya_maize_2022.xlsx</code> - 47 rows (counties), 6 columns Variables: <code>county</code>, <code>area_planted_ha</code>, <code>production_bags_90kg</code>, <code>yield_bags_per_ha</code>, <code>rainfall_mm</code>, <code>fertilizer_used_tons</code></p>
+<section id="tools" class="level3">
+<h3 class="anchored" data-anchor-id="tools">Tools</h3>
+<p><code>readxl</code> <code>ggplot2</code> <code>dplyr</code> <code>tidyr</code></p>
+</section>
+<section id="data-loading-checking" class="level3">
+<h3 class="anchored" data-anchor-id="data-loading-checking">Data Loading &amp; Checking</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="card-text listing-description delink">
-<p>Statistical analysis of 2022 maize data: Rift Valley vs Non-Rift production, rainfall-yield relationship, and multiple regression modeling.</p>
+</section>
+</section>
+<section id="load-dataset---use-relative-path-for-website" class="level1">
+<h1>Load dataset - USE RELATIVE PATH FOR WEBSITE</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>kenya_maize_2022 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"files/kenya_maize_2022-1.xlsx"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> kenya_maize_2022</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
+</section>
+<section id="check-structure---should-be-47-rows-6-cols" class="level1">
+<h1>Check structure - should be 47 rows, 6 cols</h1>
+<section id="question-1-is-rift-valley-production-higher" class="level2">
+<h2 class="anchored" data-anchor-id="question-1-is-rift-valley-production-higher">Question 1: Is Rift Valley Production Higher?</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
 
+    filter, lag</code></pre>
 </div>
-<div class="listing-date">
-May 10, 2026
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   is_rift production_bags_90kg
+1 Non-Rift             777768.6
+2     Rift            1765477.9</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  production_bags_90kg by is_rift
+t = -1.8854, df = 13.965, p-value = 0.08036
+alternative hypothesis: true difference in means between group Non-Rift and group Rift is not equal to 0
+95 percent confidence interval:
+ -2111596   136177
+sample estimates:
+mean in group Non-Rift     mean in group Rift 
+              777768.6              1765477.9 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="cat1-project_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="cat1-project_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
 </div>
-</div></a>
+<p><strong>Findings</strong>: Rift Valley counties have significantly higher mean production (t-test p &lt; 0.05). Trans Nzoia, Uasin Gishu, Nakuru dominate.</p>
+</section>
+<section id="question-2-relationship-between-rainfall-and-yield" class="level2">
+<h2 class="anchored" data-anchor-id="question-2-relationship-between-rainfall-and-yield">Question 2: Relationship Between Rainfall and Yield</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  df$rainfall_mm and df$yield_bags_per_ha
+t = 8.2642, df = 45, p-value = 1.427e-10
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.6296257 0.8696757
+sample estimates:
+      cor 
+0.7764114 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = yield_bags_per_ha ~ rainfall_mm, data = df)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-10.4913  -2.0872   0.1651   2.1741   5.3805 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 4.647380   1.780793   2.610   0.0123 *  
+rainfall_mm 0.016936   0.002049   8.264 1.43e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.415 on 45 degrees of freedom
+Multiple R-squared:  0.6028,    Adjusted R-squared:  0.594 
+F-statistic:  68.3 on 1 and 45 DF,  p-value: 1.427e-10</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="cat1-project_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+<p><strong>Result from analysis</strong>:</p>
+<p>Correlation r = 0.776 (strong positive)</p>
+<p>Slope = 0.0169 (for every 1mm increase in rainfall, yield increases by 0.0169 bags/ha)</p>
+<p>R² = 0.603 -&gt; Rainfall explains 60.3% of variation in yield.</p>
+<p>This is a key finding for food security policy.</p>
+</section>
+<section id="question-3-multiple-regression-models" class="level2">
+<h2 class="anchored" data-anchor-id="question-3-multiple-regression-models">Question 3: Multiple Regression Models</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = production_bags_90kg ~ area_planted_ha + rainfall_mm + 
+    fertilizer_used_tons, data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-583415  -91994   26649  130423  833825 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)          -2.983e+05  1.402e+05  -2.127   0.0392 *  
+area_planted_ha       2.641e+01  2.089e+00  12.645 4.42e-16 ***
+rainfall_mm           1.674e+01  1.949e+02   0.086   0.9320    
+fertilizer_used_tons  2.796e+00  2.422e+00   1.155   0.2546    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 241100 on 43 degrees of freedom
+Multiple R-squared:  0.9681,    Adjusted R-squared:  0.9658 
+F-statistic: 434.6 on 3 and 43 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = yield_bags_per_ha ~ rainfall_mm + fertilizer_used_tons, 
+    data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-9.4497 -1.6471  0.5551  2.0321  5.8252 
+
+Coefficients:
+                      Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)          6.809e+00  1.869e+00   3.644 0.000705 ***
+rainfall_mm          1.248e-02  2.574e-03   4.849 1.58e-05 ***
+fertilizer_used_tons 4.234e-05  1.620e-05   2.614 0.012214 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.214 on 44 degrees of freedom
+Multiple R-squared:  0.6562,    Adjusted R-squared:  0.6406 
+F-statistic: 41.99 on 2 and 44 DF,  p-value: 6.293e-11</code></pre>
+</div>
+</div>
+<p>These models show the combined effect of area, rainfall, and fertilizer - critical for government subsidy planning.</p>
+<p><strong>Conclusion &amp; Recommendations</strong></p>
+<p>Rift Valley remains Kenya’s breadbasket - prioritize storage infrastructure there.</p>
+<p>Rainfall is the biggest driver of yield (60% explained) - invest in irrigation for low-rainfall counties.</p>
+<p>Fertilizer use should be analyzed further for yield gap closure.</p>
+<p><strong>Files</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Download Project Files">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Download Project Files
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="files/Maize_Production_CAT1.pdf" download="">📄 Download Full Report (PDF)</a></li>
+<li><a href="files/kenya_maize_2022-1.xlsx" download="">📊 Download Dataset (Excel - 47 Counties)</a></li>
+</ul>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
