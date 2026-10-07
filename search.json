@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Tools: R, ggplot2, Tidyverse\n\nCompared Rift Valley vs Non-Rift production using t-test\nModelled yield vs rainfall: R² = 60.3%\nMultiple regression: area drives total bags, rainfall + fertilizer drives yield\nVisualization: Top 15 maize producing counties bar chart\n\n\n\n\nBuilt this Quarto website hosted on GitHub Pages.\nMore projects coming soon."
+  },
+  {
+    "objectID": "projects.html#projects-done",
+    "href": "projects.html#projects-done",
+    "title": "Projects",
+    "section": "",
+    "text": "Tools: R, ggplot2, Tidyverse\n\nCompared Rift Valley vs Non-Rift production using t-test\nModelled yield vs rainfall: R² = 60.3%\nMultiple regression: area drives total bags, rainfall + fertilizer drives yield\nVisualization: Top 15 maize producing counties bar chart\n\n\n\n\nBuilt this Quarto website hosted on GitHub Pages.\nMore projects coming soon."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About me",
+    "section": "",
+    "text": "Hi, I am Cliff Muriu\nI am a student passionate about Data Science, Statistics and Technology.\n\nEducation\n\n[Add your Course, e.g. BSc Statistics and Programming]\n[Your University]\n[Year of Study]\n\n\n\nSkills\n\nR Programming, Data Analysis & Visualization\nQuarto Websites, Git & GitHub\nProblem solving and teamwork\n\n\n\nInterests\nTechnology, Agriculture data, Football, Learning new tools.\n\n\nContact\nEmail: cliffmuriu@gmail.com GitHub: @cliffke"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Cliff Muriu",
+    "section": "",
+    "text": "title: “Cliff Muriu” about: template: trestles links: - icon: github text: Github href: https://github.com/cliffke1 - icon: whatsapp text: WhatsApp href: https://wa.me/254742950424 —"
+  },
+  {
+    "objectID": "index.html#welcome-to-my-portfolio",
+    "href": "index.html#welcome-to-my-portfolio",
+    "title": "Cliff Muriu",
+    "section": "Welcome to My Portfolio",
+    "text": "Welcome to My Portfolio\nThis is my personal Quarto website created for CAT 2.\nThis website showcases who I am, what I do, and the projects I have completed, including my CAT 1 data analysis.\nOn this site: - Home: Overview of the site - About: Details about me - Projects: Sample projects done (CAT 1)\nBuilt with Quarto, R, and hosted on GitHub Pages."
+  }
+]
