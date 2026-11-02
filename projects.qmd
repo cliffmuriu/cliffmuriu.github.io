@@ -3,6 +3,7 @@ title: "Projects"
 listing:
   contents: 
     - cat1-project.qmd
+    - kenya_school_age.qmd
     - customer-segmentation.qmd
     - dashboard.qmd
   sort: "date desc"
