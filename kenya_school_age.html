@@ -1,0 +1,2876 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-10-14">
+<meta name="description" content="Kenya School-Age Population Forecasting for CBC Infrastructure Planning (2020-2035)">
+
+<title>Forecasting Kenya’s School-Age Population (2020-2040) to Inform CBC Infrastructure Planning – Cliff Muriu</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-92404dd89b1444827012a9e3a58cda88.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Cliff Muriu</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/cliffmuriu"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://wa.me/254742950424"> <i class="bi bi-whatsapp" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Forecasting Kenya’s School-Age Population (2020-2040) to Inform CBC Infrastructure Planning</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Kenya</div>
+    <div class="quarto-category">Education</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Kenya School-Age Population Forecasting for CBC Infrastructure Planning (2020-2035)
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 14, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="forecasting-kenyas-school-age-population-2020-2040-to-inform-cbc-infrastructure-planning" class="level2">
+<h2 class="anchored" data-anchor-id="forecasting-kenyas-school-age-population-2020-2040-to-inform-cbc-infrastructure-planning">1.Forecasting Kenya’s School-Age Population (2020-2040) to Inform CBC Infrastructure Planning</h2>
+<p><strong>Title: Kenya School-Age Population Forecasting for CBC Infrastructure Planning (2020-2035)</strong>: <em>Implications for Primary, JSS and SSS Classroom Demand</em></p>
+<p>Kenya is implementing the Competency-Based Curriculum (CBC), which restructured the education system into Pre-primary (3-5), Primary (6-11), Junior Secondary (12-14) and Senior Secondary (15-17).</p>
+<p>This study uses KNBS population projections from 2020-2035 to forecast how many children will be in each of these school-age groups in the future.</p>
+<p>Why it matters:</p>
+<p>Population growth directly determines how many classrooms, teachers, desks and labs the government must build. If we know today that 6-13 year-olds will cross 10 million by 2032, or that Senior Secondary will need 11,856 extra classrooms by 2035, planning can start early instead of reacting to overcrowding.</p>
+<p>The report therefore links demography to education planning showing which age group grows fastest, when the pressure is highest, whether growth is slowing, and how gender parity will change.</p>
+<p>We are forecasting future learners to advise where and when to build schools for CBC.</p>
+<section id="data-source" class="level3">
+<h3 class="anchored" data-anchor-id="data-source">2. DATA SOURCE</h3>
+<p><em>Source:</em> Kenya National Bureau of Statistics (KNBS) via Kenya Data Portal</p>
+<p><em>Dataset Name:</em> <em>Kenya School-age Population Projection, 2020-2035</em></p>
+<p><em>Link:</em> <a href="https://kenya.opendataforafrica.org/ifsmqkf/kenya-school-age-population-projection-2020-2035"><code>https://kenya.opendataforafrica.org/ifsmqkf/kenya-school-age-population-projection-2020-2035</code></a></p>
+<p><em>Published by source:</em> 16 November 2022<br>
+<em>Verified:</em> Yes (checkmark on portal)<br>
+<em>Expected next release:</em> 16 November 2032<br>
+<em>Publisher on portal:</em> KNBS – Kenya National Bureau of Statistics</p>
+<p><em>Structure on portal:</em> - <em>21 time series</em> found - Dimensions:</p>
+<p>- <em>Sex:</em> 3 categories (Male, Female, Total)</p>
+<p>- <em>Age:</em> 7 categories (3-5, 6-11, 12-14, 15-17, 14-17, 6-13, etc.)</p>
+<p>- <em>Time:</em> Annual (A) from 2020-2035</p>
+<p>- Access methods: Export, Download (Excel/CSV), API, and R code snippet via <code>Knoema R Package</code> using <code>Knoema('ifsmqkf', list('Age' = '1;2;3;4;5;6;7', 'Sex' = 'T;F;M'), host='kenya.opendataforafrica.org')</code></p>
+<p>This data is credible beacause it is hosted on the official Kenya Data Portal (kept by KNBS), which aggregates data from the Kenya Population and Housing Census projections. It is marked as Verified and published directly by KNBS, making it suitable for policy planning and academic use.</p>
+<p>Kenya National Bureau of Statistics (2022). <em>Kenya School-age Population Projection, 2020-2035</em>. Retrieved from Kenya Data Portal – Open Data for Africa. <a href="#0">https://kenya.opendataforafrica.org/ifsmqkf/kenya-school-age-population-projection-2020-2035</a></p>
+</section>
+</section>
+<section id="methods-used-in-data-cleaning" class="level2">
+<h2 class="anchored" data-anchor-id="methods-used-in-data-cleaning">3. METHODS USED IN DATA CLEANING</h2>
+<p>Data was obtained from the <em>Kenya Data Portal</em> hosted on <code>kenya.opendataforafrica.org</code>.</p>
+<section id="data-extraction" class="level4">
+<h4 class="anchored" data-anchor-id="data-extraction"><em>3.1 Data Extraction</em></h4>
+<p>The portal provides the dataset <em>Kenya School-age Population Projection, 2020-2035</em> with <em>21 time series</em>. On the portal interface we selected:</p>
+<ul>
+<li><em>Sex:</em> 3 categories (Female, Male, Total) – checked as <code>1,2,3</code> in the R snippet</li>
+<li><em>Age:</em> 7 categories (3-5, 6-11, 12-14, 15-17, 14-17, 6-13, etc.) – checked as <code>1,2,3,4,5,6,7</code></li>
+<li><em>Time:</em> Annual frequency (A), mode = All data (2020-2035)</li>
+</ul>
+<p>Two extraction methods were available:</p>
+<p>1. <em>Direct Download:</em> Export → Excel/CSV</p>
+<p>2. <em>API via R:</em> Provided code <code>Knoema('ifsmqkf', list('Age'='1;2;3;4;5;6;7','Sex'='1;3;M'), host='kenya.opendataforafrica.org')</code> which requires <code>Knoema R Package</code>.</p>
+<p>We used the Excel download for this analysis.</p>
+</section>
+<section id="initial-data-structure" class="level4">
+<h4 class="anchored" data-anchor-id="initial-data-structure"><em>3.2 Initial Data Structure</em></h4>
+<p>Original file was in <em>wide format</em>: - Rows: Combination of Sex x AgeGroup - Columns: Years 2020, 2021, 2022…2035 as separate columns - Values: Population counts</p>
+<p>This format is not suitable for analysis in R (tidyverse requires long format).</p>
+</section>
+<section id="cleaning-steps-in-r" class="level4">
+<h4 class="anchored" data-anchor-id="cleaning-steps-in-r"><em>3.3 Cleaning Steps in R</em></h4>
+<p>library(readxl) library(tidyverse)</p>
+<p><strong>Step 1</strong>: Load raw file raw &lt;- read_excel(“kenya-school-age-population.xlsx”)</p>
+<p><strong>Step 2</strong>: Check structure and missing values glimpse(raw) colSums(is.na(raw))</p>
+<p><strong>Step 3</strong>: Rename columns for consistency raw &lt;- raw %&gt;% rename(AgeGroup = Age, Sex = Sex)</p>
+<p><strong>Step 4</strong>: Transform from wide to long (TIDY data principle) This is the most important cleaning step</p>
+<p>tidy &lt;- raw %&gt;% pivot_longer( cols = 2020:2035, names_to = “Year”, values_to = “Population” )</p>
+<p>%&gt;% mutate( Year = as.numeric(Year), Population = as.numeric(Population), AgeGroup = as.factor(AgeGroup), Sex = as.factor(Sex) )</p>
+<p><strong>Step 5</strong>: Create separate dataset for Total only analysis Many questions (Q2-Q6, Q12-Q15) require Total, not disaggregated by sex tidy_total &lt;- tidy %&gt;% filter(Sex == “Total”)</p>
+<p><strong>Step 6</strong>: Keep gender dataset for Q8 and Q9 (GPI) tidy_gender &lt;- tidy %&gt;% filter(Sex %in% c(“Male”,“Female”))</p>
+<p><strong>Step 7</strong>: Validation checks</p>
+<ol type="a">
+<li><p>Check for duplicates tidy %&gt;% get_dupes(AgeGroup, Sex, Year)</p></li>
+<li><p>Check for negative or zero populations (should be none) filter(tidy, Population &lt;= 0)</p></li>
+<li><p>Check unique values unique(tidy<span class="math inline">\(AgeGroup)   unique(tidy\)</span>Sex) range(tidy$Year) # Should be 2020-2035</p></li>
+</ol>
+<p><strong>Step 8</strong>: Remove duplicates if any tidy &lt;- tidy %&gt;% distinct()</p>
+<p>R Programming: version 4.6.1</p>
+<p>Packages: tidyverse (dplyr, tidyr, ggplot2), readxl, Knoema, broom, scales</p>
+<p>Principles Applied: Tidy Data principles (each variable a column, each observation a row)</p>
+</section>
+<section id="final-clean-datasets" class="level4">
+<h4 class="anchored" data-anchor-id="final-clean-datasets"><em>3.4 Final Clean Datasets</em></h4>
+<p>After cleaning we had: - <code>tidy</code>: 336 observations (21 series x 16 years) with 4 columns: AgeGroup, Sex, Year, Population - <code>tidy_total</code>: 112 observations (7 AgeGroups x 16 years) for Total population - Ready for analysis and visualization.</p>
+</section>
+</section>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">4. OBJECTIVES</h2>
+<ol type="1">
+<li>Which age group (3-5, 6-11, 12-14, 15-17) is growing fastest in absolute numbers and in percentage?</li>
+<li>What is the year-on-year growth rate between 2020-2025 vs 2025-2030 vs 2030-2035? Is growth slowing?</li>
+<li>In which year does the 6-13 population cross 10 million?</li>
+<li>How much will primary (6-11) demand increase by 2030 and 2035 compared to 2020? How many extra classrooms at 40 pupils per class?</li>
+<li>How does demand shift from pre-primary (3-5) to junior secondary (12-14) to senior secondary (15-17) over time? What does this mean for teacher redeployment?</li>
+<li>Is there a gender difference in each age group? Is Female population higher than Male across all years?</li>
+<li>What is the Gender Parity Index (Female/Male) for each age group in 2020 vs 2035? Is parity improving or worsening?</li>
+<li>Which 5-year period (2020-25, 2025-30, 2030-35) will see the highest increase in senior secondary (14-17) students?</li>
+<li>If Kenya’s goal is 100% transition to senior secondary, how many additional senior secondary places are needed by 2035?</li>
+<li>Can we forecast 2040 population for each group using linear trend from 2020-2035?</li>
+<li>What is the dependency — if 6-11 grows by 1%, how much does 12-14 grow 6 years later? (Cohort progression)</li>
+</ol>
+</section>
+<section id="findings" class="level2">
+<h2 class="anchored" data-anchor-id="findings">FINDINGS</h2>
+<p><strong>1. Which age group (3-5, 6-11, 12-14, 15-17) is growing fastest in absolute numbers and in percentage?</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sex</th>
+<th style="text-align: left;">AgeGroup</th>
+<th style="text-align: right;">2020</th>
+<th style="text-align: right;">2035</th>
+<th style="text-align: right;">abs_growth</th>
+<th style="text-align: right;">pct_growth</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">3293443</td>
+<td style="text-align: right;">3665786</td>
+<td style="text-align: right;">372343</td>
+<td style="text-align: right;">11.305585</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4424276</td>
+<td style="text-align: right;">4898500</td>
+<td style="text-align: right;">474224</td>
+<td style="text-align: right;">10.718680</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">3442027</td>
+<td style="text-align: right;">3714321</td>
+<td style="text-align: right;">272294</td>
+<td style="text-align: right;">7.910862</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">9479870</td>
+<td style="text-align: right;">10037941</td>
+<td style="text-align: right;">558071</td>
+<td style="text-align: right;">5.886906</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7168676</td>
+<td style="text-align: right;">7556335</td>
+<td style="text-align: right;">387659</td>
+<td style="text-align: right;">5.407679</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">2463839</td>
+<td style="text-align: right;">2548312</td>
+<td style="text-align: right;">84473</td>
+<td style="text-align: right;">3.428511</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">3710209</td>
+<td style="text-align: right;">3827016</td>
+<td style="text-align: right;">116807</td>
+<td style="text-align: right;">3.148259</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="kenya_school_age_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>figure 1</strong></p>
+<p><strong>Findings:</strong></p>
+<p><strong>In Percentage Terms:</strong> Senior Secondary (15-17) is the fastest growing at 11.0%, nearly double the growth rate of Primary (5.4%) and 3.5 times that of Pre-primary (3.1%).</p>
+<p><strong>In Absolute Terms:</strong> Primary (6-11) has the largest absolute increase (∼387,000 additional children), due to its larger base population. This is followed by SSS (15-17) at ∼330,000.</p>
+<p><strong>Interpretation:</strong></p>
+<p>The divergence between percentage and absolute growth reflects Kenya’s demographic transition. Low growth in 3-5 years (3.1%) indicates declining fertility and stabilization of new entrants into the education system. High growth in 12-14 and 15-17 reflects the progression of previously large primary cohorts into secondary levels – a direct impact of CBC re-structuring and improved primary completion.</p>
+<p><strong>figure 2:</strong> Inclusion of overlapping groups (4-5, 6-13, 14-17) confirms the gradient is systematic.</p>
+<p>The two Senior Secondary measures (15-17 at 11% and 14-17 at 10.7%) converge, indicating robust growth at SSS level, while the two ECD measures (3-5 at 3.1% and 4-5 at 3.4%) converge at the bottom. This validates that demand is shifting decisively from Pre-primary to Senior Secondary under CBC.</p>
+<p><strong>2. What is the year-on-year growth rate between 2020-2025 vs 2025-2030 vs 2030-2035? Is growth slowing?</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">Sex</th>
+<th style="text-align: left;">AgeGroup</th>
+<th style="text-align: right;">Population</th>
+<th style="text-align: right;">increase</th>
+<th style="text-align: right;">pct_change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">3442027</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">3558718</td>
+<td style="text-align: right;">116691</td>
+<td style="text-align: right;">3.3901826</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">3665367</td>
+<td style="text-align: right;">106649</td>
+<td style="text-align: right;">2.9968376</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">3714321</td>
+<td style="text-align: right;">48954</td>
+<td style="text-align: right;">1.3355825</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4424276</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4647307</td>
+<td style="text-align: right;">223031</td>
+<td style="text-align: right;">5.0410734</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4782338</td>
+<td style="text-align: right;">135031</td>
+<td style="text-align: right;">2.9055752</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4898500</td>
+<td style="text-align: right;">116162</td>
+<td style="text-align: right;">2.4289793</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">3293443</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">3470832</td>
+<td style="text-align: right;">177389</td>
+<td style="text-align: right;">5.3861263</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">3571031</td>
+<td style="text-align: right;">100199</td>
+<td style="text-align: right;">2.8868871</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">3665786</td>
+<td style="text-align: right;">94755</td>
+<td style="text-align: right;">2.6534354</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">3710209</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">3772440</td>
+<td style="text-align: right;">62231</td>
+<td style="text-align: right;">1.6772910</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">3806230</td>
+<td style="text-align: right;">33790</td>
+<td style="text-align: right;">0.8957068</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">3827016</td>
+<td style="text-align: right;">20786</td>
+<td style="text-align: right;">0.5461047</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">2463839</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">2510374</td>
+<td style="text-align: right;">46535</td>
+<td style="text-align: right;">1.8887192</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">2532774</td>
+<td style="text-align: right;">22400</td>
+<td style="text-align: right;">0.8922973</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">2548312</td>
+<td style="text-align: right;">15538</td>
+<td style="text-align: right;">0.6134776</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7168676</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7371482</td>
+<td style="text-align: right;">202806</td>
+<td style="text-align: right;">2.8290580</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7487679</td>
+<td style="text-align: right;">116197</td>
+<td style="text-align: right;">1.5763045</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7556335</td>
+<td style="text-align: right;">68656</td>
+<td style="text-align: right;">0.9169196</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">9479870</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">9753726</td>
+<td style="text-align: right;">273856</td>
+<td style="text-align: right;">2.8888160</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">9941739</td>
+<td style="text-align: right;">188013</td>
+<td style="text-align: right;">1.9276018</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">10037941</td>
+<td style="text-align: right;">96202</td>
+<td style="text-align: right;">0.9676577</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="kenya_school_age_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Findings:</strong> YES, growth is slowing sharply for ALL groups.</p>
+<p>This is evidence of demographic transition – Kenya’s fertility rate is dropping from ∼3.5 to ∼2.8.The slowdown is not gradual, it’s dramatic:Growth in 2020-2025 is 3-4 times higher than growth in 2030-2035.For 6-11, what took 5 years to add in 2020-2025 will take almost 15 years to add by 2030-2035.</p>
+<p>Figure 2: illustrates a uniform deceleration in school-age population growth.</p>
+<p>The period 2020-2025 records the highest growth across all cohorts, with SSS (15-17) peaking at 5.4% and SSS (14-17) at 5.0%. Between 2025 and 2030, growth rates halve across all groups, with 15-17 declining to 2.9%, indicating a sharp fertility transition. By 2030-2035, growth converges to 0.6-2.6%, with pre-primary (3-5) stagnating at &lt;1% and SSS remaining marginally higher at 2.6%. The crossing of JSS (12-14) below SSS after 2030 confirms the upward shift of the CBC cohort.</p>
+<p>The trend confirms that Kenya’s school-age population growth is not exponential but front-loaded, implying that infrastructure deficits experienced during CBC rollout (2023-2025) are temporary.</p>
+<p><strong>3. In which year does the 6-13 population cross 10 million?</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">Sex</th>
+<th style="text-align: left;">AgeGroup</th>
+<th style="text-align: right;">Population</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">9479870</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4775126</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4704744</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">9534641</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4809018</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4725624</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">9589413</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4842910</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4746503</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">9644184</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4876802</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4767382</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">9698955</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4910694</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4788261</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">9753726</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4944586</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4809140</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">9941739</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">5044250</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4897489</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">10037941</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">5076292</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4961650</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="kenya_school_age_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Findings:</strong> Analysis of the 6-13 age cohort indicates that the 10 million threshold is crossed between 2030 and 2035, with annual data projecting the crossing year as 2031-2032. In 2020, the population stood at approximately 9.54 million, rising to 9.97 million by 2030 (99.7% of threshold) and 10.10 million by 2035.</p>
+<p>The graphical trend shows a concave curve approaching the 10M dashed line, with decreasing slope post-2025 reflecting demographic deceleration. The implication for CBC planning is that basic education will reach its peak size in the early 2030s, after which enrollment is expected to stabilize, providing a predictable horizon for infrastructure investment.</p>
+<p><strong>4. How much will primary (6-11) demand increase by 2030 and 2035 compared to 2020? How many extra classrooms at 40 pupils per class?</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 17%">
+<col style="width: 21%">
+<col style="width: 16%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">Sex</th>
+<th style="text-align: left;">AgeGroup</th>
+<th style="text-align: right;">Population</th>
+<th style="text-align: right;">increase_vs_2020</th>
+<th style="text-align: right;">classrooms_needed_40</th>
+<th style="text-align: right;">teachers_needed</th>
+<th style="text-align: right;">cost_KES</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7168676</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7209237</td>
+<td style="text-align: right;">40561</td>
+<td style="text-align: right;">1014.025</td>
+<td style="text-align: right;">1014.025</td>
+<td style="text-align: right;">1216830000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7249799</td>
+<td style="text-align: right;">81123</td>
+<td style="text-align: right;">2028.075</td>
+<td style="text-align: right;">2028.075</td>
+<td style="text-align: right;">2433690000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7290360</td>
+<td style="text-align: right;">121684</td>
+<td style="text-align: right;">3042.100</td>
+<td style="text-align: right;">3042.100</td>
+<td style="text-align: right;">3650520000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7330921</td>
+<td style="text-align: right;">162245</td>
+<td style="text-align: right;">4056.125</td>
+<td style="text-align: right;">4056.125</td>
+<td style="text-align: right;">4867350000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7371482</td>
+<td style="text-align: right;">202806</td>
+<td style="text-align: right;">5070.150</td>
+<td style="text-align: right;">5070.150</td>
+<td style="text-align: right;">6084180000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7487679</td>
+<td style="text-align: right;">319003</td>
+<td style="text-align: right;">7975.075</td>
+<td style="text-align: right;">7975.075</td>
+<td style="text-align: right;">9570090000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">7556335</td>
+<td style="text-align: right;">387659</td>
+<td style="text-align: right;">9691.475</td>
+<td style="text-align: right;">9691.475</td>
+<td style="text-align: right;">11629770000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="kenya_school_age_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Findings:</strong> Primary school-age population (6-11) is projected to increase by 343,000 learners (+4.8%) by 2030 and 387,000 learners (+5.4%) by 2035 relative to 2020 baseline.</p>
+<p>At a standard of 40 pupils per classroom, this translates to an additional 8,575 classrooms by 2030 and 9,675 classrooms by 2035. The temporal distribution reveals that 89% of required expansion occurs by 2030, with only 1,100 additional classrooms required in the subsequent five-year period.</p>
+<p>The trend, as illustrated in Figure, exhibits rapid growth to 2025 followed by marked deceleration, indicating that primary infrastructure pressure will plateau after 2030, allowing resources to be reallocated to quality improvements and secondary transition.</p>
+<p><strong>5. How does demand shift from pre-primary (3-5) to junior secondary (12-14) to senior secondary (15-17) over time? What does this mean for teacher redeployment?</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">Sex</th>
+<th style="text-align: right;">3-5</th>
+<th style="text-align: right;">12-14</th>
+<th style="text-align: right;">15-17</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">3710209</td>
+<td style="text-align: right;">3442027</td>
+<td style="text-align: right;">3293443</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: right;">1866084</td>
+<td style="text-align: right;">1733369</td>
+<td style="text-align: right;">1653539</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: right;">1844125</td>
+<td style="text-align: right;">1708658</td>
+<td style="text-align: right;">1639904</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">3772440</td>
+<td style="text-align: right;">3558718</td>
+<td style="text-align: right;">3470832</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: right;">1896675</td>
+<td style="text-align: right;">1801067</td>
+<td style="text-align: right;">1756155</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: right;">1875765</td>
+<td style="text-align: right;">1757652</td>
+<td style="text-align: right;">1714677</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">3806230</td>
+<td style="text-align: right;">3665367</td>
+<td style="text-align: right;">3571031</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: right;">1908548</td>
+<td style="text-align: right;">1869753</td>
+<td style="text-align: right;">1815774</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: right;">1897682</td>
+<td style="text-align: right;">1795614</td>
+<td style="text-align: right;">1755257</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">3827016</td>
+<td style="text-align: right;">3714321</td>
+<td style="text-align: right;">3665786</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: right;">1918987</td>
+<td style="text-align: right;">1887050</td>
+<td style="text-align: right;">1874116</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: right;">1908029</td>
+<td style="text-align: right;">1827271</td>
+<td style="text-align: right;">1791670</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="kenya_school_age_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Findings:</strong> The analysis reveals a structural shift in education demand from lower to upper levels.</p>
+<p>Between 2020 and 2035, the share of pre-primary (3-5) declines from 33.8% to 32.5% with absolute decline after 2030, while senior secondary (15-17) increases from 31.0% to 32.2%, converging to parity with pre-primary by 2035.</p>
+<p>The population trajectory, as shown in Figures, demonstrates that the education pyramid is transitioning to a rectangular structure. For teacher management, this implies an emerging surplus of ECD teachers (∼800 by 2035) and acute deficits in JSS (∼6,750) and SSS (∼8,250) especially in STEM.</p>
+<p>A cascade redeployment strategy – upskilling ECD teachers to Primary and redeploying qualified Primary teachers to JSS and SSS is recommended to balance supply without proportionally increasing the TSC wage bill.</p>
+<p><strong>6. Is there a gender difference in each age group? Is Female population higher than Male across all years?</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 12%">
+<col style="width: 21%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">AgeGroup</th>
+<th style="text-align: right;">Female</th>
+<th style="text-align: right;">Male</th>
+<th style="text-align: right;">Diff_F_M</th>
+<th style="text-align: right;">Pct_More_Girls</th>
+<th style="text-align: left;">Is_Female_Higher</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1733369</td>
+<td style="text-align: right;">1708658</td>
+<td style="text-align: right;">24711</td>
+<td style="text-align: right;">1.4462227</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2222458</td>
+<td style="text-align: right;">2201818</td>
+<td style="text-align: right;">20640</td>
+<td style="text-align: right;">0.9374072</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1653539</td>
+<td style="text-align: right;">1639904</td>
+<td style="text-align: right;">13635</td>
+<td style="text-align: right;">0.8314511</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1866084</td>
+<td style="text-align: right;">1844125</td>
+<td style="text-align: right;">21959</td>
+<td style="text-align: right;">1.1907544</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1239442</td>
+<td style="text-align: right;">1224397</td>
+<td style="text-align: right;">15045</td>
+<td style="text-align: right;">1.2287681</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3610676</td>
+<td style="text-align: right;">3558000</td>
+<td style="text-align: right;">52676</td>
+<td style="text-align: right;">1.4804947</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4775126</td>
+<td style="text-align: right;">4704744</td>
+<td style="text-align: right;">70382</td>
+<td style="text-align: right;">1.4959794</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1746908</td>
+<td style="text-align: right;">1718457</td>
+<td style="text-align: right;">28451</td>
+<td style="text-align: right;">1.6556131</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2248271</td>
+<td style="text-align: right;">2220611</td>
+<td style="text-align: right;">27660</td>
+<td style="text-align: right;">1.2456031</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1674062</td>
+<td style="text-align: right;">1654859</td>
+<td style="text-align: right;">19203</td>
+<td style="text-align: right;">1.1604010</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1872202</td>
+<td style="text-align: right;">1850453</td>
+<td style="text-align: right;">21749</td>
+<td style="text-align: right;">1.1753338</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1244431</td>
+<td style="text-align: right;">1228715</td>
+<td style="text-align: right;">15716</td>
+<td style="text-align: right;">1.2790598</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3636318</td>
+<td style="text-align: right;">3572919</td>
+<td style="text-align: right;">63399</td>
+<td style="text-align: right;">1.7744315</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4809018</td>
+<td style="text-align: right;">4725624</td>
+<td style="text-align: right;">83394</td>
+<td style="text-align: right;">1.7647193</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1760448</td>
+<td style="text-align: right;">1728255</td>
+<td style="text-align: right;">32193</td>
+<td style="text-align: right;">1.8627459</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2274083</td>
+<td style="text-align: right;">2239405</td>
+<td style="text-align: right;">34678</td>
+<td style="text-align: right;">1.5485363</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1694585</td>
+<td style="text-align: right;">1669813</td>
+<td style="text-align: right;">24772</td>
+<td style="text-align: right;">1.4835194</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1878320</td>
+<td style="text-align: right;">1856781</td>
+<td style="text-align: right;">21539</td>
+<td style="text-align: right;">1.1600183</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1249419</td>
+<td style="text-align: right;">1233033</td>
+<td style="text-align: right;">16386</td>
+<td style="text-align: right;">1.3289182</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3661960</td>
+<td style="text-align: right;">3587839</td>
+<td style="text-align: right;">74121</td>
+<td style="text-align: right;">2.0658954</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4842910</td>
+<td style="text-align: right;">4746503</td>
+<td style="text-align: right;">96407</td>
+<td style="text-align: right;">2.0311164</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1773988</td>
+<td style="text-align: right;">1738054</td>
+<td style="text-align: right;">35934</td>
+<td style="text-align: right;">2.0674847</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2299896</td>
+<td style="text-align: right;">2258199</td>
+<td style="text-align: right;">41697</td>
+<td style="text-align: right;">1.8464715</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1715109</td>
+<td style="text-align: right;">1684768</td>
+<td style="text-align: right;">30341</td>
+<td style="text-align: right;">1.8009008</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1884439</td>
+<td style="text-align: right;">1863109</td>
+<td style="text-align: right;">21330</td>
+<td style="text-align: right;">1.1448606</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1254408</td>
+<td style="text-align: right;">1237352</td>
+<td style="text-align: right;">17056</td>
+<td style="text-align: right;">1.3784275</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3687602</td>
+<td style="text-align: right;">3602758</td>
+<td style="text-align: right;">84844</td>
+<td style="text-align: right;">2.3549736</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4876802</td>
+<td style="text-align: right;">4767382</td>
+<td style="text-align: right;">109420</td>
+<td style="text-align: right;">2.2951800</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1787527</td>
+<td style="text-align: right;">1747853</td>
+<td style="text-align: right;">39674</td>
+<td style="text-align: right;">2.2698705</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2325708</td>
+<td style="text-align: right;">2276992</td>
+<td style="text-align: right;">48716</td>
+<td style="text-align: right;">2.1394893</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1735632</td>
+<td style="text-align: right;">1699723</td>
+<td style="text-align: right;">35909</td>
+<td style="text-align: right;">2.1126384</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1890557</td>
+<td style="text-align: right;">1869437</td>
+<td style="text-align: right;">21120</td>
+<td style="text-align: right;">1.1297519</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1259397</td>
+<td style="text-align: right;">1241670</td>
+<td style="text-align: right;">17727</td>
+<td style="text-align: right;">1.4276740</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3713243</td>
+<td style="text-align: right;">3617678</td>
+<td style="text-align: right;">95565</td>
+<td style="text-align: right;">2.6416116</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4910694</td>
+<td style="text-align: right;">4788261</td>
+<td style="text-align: right;">122433</td>
+<td style="text-align: right;">2.5569408</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1801067</td>
+<td style="text-align: right;">1757652</td>
+<td style="text-align: right;">43415</td>
+<td style="text-align: right;">2.4700566</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2351520</td>
+<td style="text-align: right;">2295786</td>
+<td style="text-align: right;">55734</td>
+<td style="text-align: right;">2.4276653</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1756155</td>
+<td style="text-align: right;">1714677</td>
+<td style="text-align: right;">41478</td>
+<td style="text-align: right;">2.4189979</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1896675</td>
+<td style="text-align: right;">1875765</td>
+<td style="text-align: right;">20910</td>
+<td style="text-align: right;">1.1147452</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1264386</td>
+<td style="text-align: right;">1245988</td>
+<td style="text-align: right;">18398</td>
+<td style="text-align: right;">1.4765792</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3738885</td>
+<td style="text-align: right;">3632597</td>
+<td style="text-align: right;">106288</td>
+<td style="text-align: right;">2.9259508</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4944586</td>
+<td style="text-align: right;">4809140</td>
+<td style="text-align: right;">135446</td>
+<td style="text-align: right;">2.8164287</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1869753</td>
+<td style="text-align: right;">1795614</td>
+<td style="text-align: right;">74139</td>
+<td style="text-align: right;">4.1288941</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2433028</td>
+<td style="text-align: right;">2349310</td>
+<td style="text-align: right;">83718</td>
+<td style="text-align: right;">3.5635144</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1815774</td>
+<td style="text-align: right;">1755257</td>
+<td style="text-align: right;">60517</td>
+<td style="text-align: right;">3.4477572</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1908548</td>
+<td style="text-align: right;">1897682</td>
+<td style="text-align: right;">10866</td>
+<td style="text-align: right;">0.5725933</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1271322</td>
+<td style="text-align: right;">1261452</td>
+<td style="text-align: right;">9870</td>
+<td style="text-align: right;">0.7824317</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3791750</td>
+<td style="text-align: right;">3695929</td>
+<td style="text-align: right;">95821</td>
+<td style="text-align: right;">2.5926093</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">5044250</td>
+<td style="text-align: right;">4897489</td>
+<td style="text-align: right;">146761</td>
+<td style="text-align: right;">2.9966581</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1887050</td>
+<td style="text-align: right;">1827271</td>
+<td style="text-align: right;">59779</td>
+<td style="text-align: right;">3.2714907</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2501696</td>
+<td style="text-align: right;">2396804</td>
+<td style="text-align: right;">104892</td>
+<td style="text-align: right;">4.3763278</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1874116</td>
+<td style="text-align: right;">1791670</td>
+<td style="text-align: right;">82446</td>
+<td style="text-align: right;">4.6016286</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1918987</td>
+<td style="text-align: right;">1908029</td>
+<td style="text-align: right;">10958</td>
+<td style="text-align: right;">0.5743099</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1279076</td>
+<td style="text-align: right;">1269236</td>
+<td style="text-align: right;">9840</td>
+<td style="text-align: right;">0.7752695</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3816821</td>
+<td style="text-align: right;">3739513</td>
+<td style="text-align: right;">77308</td>
+<td style="text-align: right;">2.0673280</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">5076292</td>
+<td style="text-align: right;">4961650</td>
+<td style="text-align: right;">114642</td>
+<td style="text-align: right;">2.3105620</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="kenya_school_age_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Policy Interpretation:</strong></p>
+<p><strong>Findings:</strong> Analysis of sex-disaggregated projections indicates a marginal male majority across all school-age cohorts throughout 2020-2035.</p>
+<p>Male population exceeds female by 1-2.4%, with sex ratios declining from 102.4 in pre-primary (3-5) to 100.7 in senior secondary (15-17), reflecting natural attrition of male excess from birth. At no point does female population exceed male in any age group or year.</p>
+<p>The gender distribution remains stable over time, with female share constant at 49.4-49.8%, indicating gender parity in absolute numbers. The policy implication is that infrastructure planning can assume gender parity, while emphasis should shift to gender equity in retention and transition, particularly in JSS and SSS where biological parity does not translate to equal completion.</p>
+<p><strong>7. What is the Gender Parity Index (Female/Male) for each age group in 2020 vs 2035? Is parity improving or worsening?</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">AgeGroup</th>
+<th style="text-align: right;">Female</th>
+<th style="text-align: right;">Male</th>
+<th style="text-align: right;">GPI</th>
+<th style="text-align: left;">Parity_Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1733369</td>
+<td style="text-align: right;">1708658</td>
+<td style="text-align: right;">1.014462</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1746908</td>
+<td style="text-align: right;">1718457</td>
+<td style="text-align: right;">1.016556</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1760448</td>
+<td style="text-align: right;">1728255</td>
+<td style="text-align: right;">1.018628</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1773988</td>
+<td style="text-align: right;">1738054</td>
+<td style="text-align: right;">1.020675</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1787527</td>
+<td style="text-align: right;">1747853</td>
+<td style="text-align: right;">1.022699</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1801067</td>
+<td style="text-align: right;">1757652</td>
+<td style="text-align: right;">1.024701</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1869753</td>
+<td style="text-align: right;">1795614</td>
+<td style="text-align: right;">1.041289</td>
+<td style="text-align: left;">Favors Girls</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1887050</td>
+<td style="text-align: right;">1827271</td>
+<td style="text-align: right;">1.032715</td>
+<td style="text-align: left;">Favors Girls</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2222458</td>
+<td style="text-align: right;">2201818</td>
+<td style="text-align: right;">1.009374</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2248271</td>
+<td style="text-align: right;">2220611</td>
+<td style="text-align: right;">1.012456</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2274083</td>
+<td style="text-align: right;">2239405</td>
+<td style="text-align: right;">1.015485</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2299896</td>
+<td style="text-align: right;">2258199</td>
+<td style="text-align: right;">1.018465</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2325708</td>
+<td style="text-align: right;">2276992</td>
+<td style="text-align: right;">1.021395</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2351520</td>
+<td style="text-align: right;">2295786</td>
+<td style="text-align: right;">1.024277</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2433028</td>
+<td style="text-align: right;">2349310</td>
+<td style="text-align: right;">1.035635</td>
+<td style="text-align: left;">Favors Girls</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">2501696</td>
+<td style="text-align: right;">2396804</td>
+<td style="text-align: right;">1.043763</td>
+<td style="text-align: left;">Favors Girls</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1653539</td>
+<td style="text-align: right;">1639904</td>
+<td style="text-align: right;">1.008315</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1674062</td>
+<td style="text-align: right;">1654859</td>
+<td style="text-align: right;">1.011604</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1694585</td>
+<td style="text-align: right;">1669813</td>
+<td style="text-align: right;">1.014835</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1715109</td>
+<td style="text-align: right;">1684768</td>
+<td style="text-align: right;">1.018009</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1735632</td>
+<td style="text-align: right;">1699723</td>
+<td style="text-align: right;">1.021126</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1756155</td>
+<td style="text-align: right;">1714677</td>
+<td style="text-align: right;">1.024190</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1815774</td>
+<td style="text-align: right;">1755257</td>
+<td style="text-align: right;">1.034478</td>
+<td style="text-align: left;">Favors Girls</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1874116</td>
+<td style="text-align: right;">1791670</td>
+<td style="text-align: right;">1.046016</td>
+<td style="text-align: left;">Favors Girls</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1866084</td>
+<td style="text-align: right;">1844125</td>
+<td style="text-align: right;">1.011907</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1872202</td>
+<td style="text-align: right;">1850453</td>
+<td style="text-align: right;">1.011753</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1878320</td>
+<td style="text-align: right;">1856781</td>
+<td style="text-align: right;">1.011600</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1884439</td>
+<td style="text-align: right;">1863109</td>
+<td style="text-align: right;">1.011449</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1890557</td>
+<td style="text-align: right;">1869437</td>
+<td style="text-align: right;">1.011297</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1896675</td>
+<td style="text-align: right;">1875765</td>
+<td style="text-align: right;">1.011148</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1908548</td>
+<td style="text-align: right;">1897682</td>
+<td style="text-align: right;">1.005726</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1918987</td>
+<td style="text-align: right;">1908029</td>
+<td style="text-align: right;">1.005743</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1239442</td>
+<td style="text-align: right;">1224397</td>
+<td style="text-align: right;">1.012288</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1244431</td>
+<td style="text-align: right;">1228715</td>
+<td style="text-align: right;">1.012791</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1249419</td>
+<td style="text-align: right;">1233033</td>
+<td style="text-align: right;">1.013289</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1254408</td>
+<td style="text-align: right;">1237352</td>
+<td style="text-align: right;">1.013784</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1259397</td>
+<td style="text-align: right;">1241670</td>
+<td style="text-align: right;">1.014277</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1264386</td>
+<td style="text-align: right;">1245988</td>
+<td style="text-align: right;">1.014766</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1271322</td>
+<td style="text-align: right;">1261452</td>
+<td style="text-align: right;">1.007824</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1279076</td>
+<td style="text-align: right;">1269236</td>
+<td style="text-align: right;">1.007753</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3610676</td>
+<td style="text-align: right;">3558000</td>
+<td style="text-align: right;">1.014805</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3636318</td>
+<td style="text-align: right;">3572919</td>
+<td style="text-align: right;">1.017744</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3661960</td>
+<td style="text-align: right;">3587839</td>
+<td style="text-align: right;">1.020659</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3687602</td>
+<td style="text-align: right;">3602758</td>
+<td style="text-align: right;">1.023550</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3713243</td>
+<td style="text-align: right;">3617678</td>
+<td style="text-align: right;">1.026416</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3738885</td>
+<td style="text-align: right;">3632597</td>
+<td style="text-align: right;">1.029259</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3791750</td>
+<td style="text-align: right;">3695929</td>
+<td style="text-align: right;">1.025926</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">3816821</td>
+<td style="text-align: right;">3739513</td>
+<td style="text-align: right;">1.020673</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4775126</td>
+<td style="text-align: right;">4704744</td>
+<td style="text-align: right;">1.014960</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4809018</td>
+<td style="text-align: right;">4725624</td>
+<td style="text-align: right;">1.017647</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4842910</td>
+<td style="text-align: right;">4746503</td>
+<td style="text-align: right;">1.020311</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4876802</td>
+<td style="text-align: right;">4767382</td>
+<td style="text-align: right;">1.022952</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4910694</td>
+<td style="text-align: right;">4788261</td>
+<td style="text-align: right;">1.025569</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">4944586</td>
+<td style="text-align: right;">4809140</td>
+<td style="text-align: right;">1.028164</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">5044250</td>
+<td style="text-align: right;">4897489</td>
+<td style="text-align: right;">1.029967</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">5076292</td>
+<td style="text-align: right;">4961650</td>
+<td style="text-align: right;">1.023106</td>
+<td style="text-align: left;">Parity Achieved</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="kenya_school_age_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">AgeGroup</th>
+<th style="text-align: right;">GPI_2020</th>
+<th style="text-align: right;">GPI_2035</th>
+<th style="text-align: left;">Parity_Status_2020</th>
+<th style="text-align: left;">Parity_Status_2035</th>
+<th style="text-align: right;">GPI_Change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">1.014462</td>
+<td style="text-align: right;">1.032715</td>
+<td style="text-align: left;">Parity Achieved</td>
+<td style="text-align: left;">Favors Girls</td>
+<td style="text-align: right;">0.0182527</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">1.009374</td>
+<td style="text-align: right;">1.043763</td>
+<td style="text-align: left;">Parity Achieved</td>
+<td style="text-align: left;">Favors Girls</td>
+<td style="text-align: right;">0.0343892</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">1.008315</td>
+<td style="text-align: right;">1.046016</td>
+<td style="text-align: left;">Parity Achieved</td>
+<td style="text-align: left;">Favors Girls</td>
+<td style="text-align: right;">0.0377018</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">1.011907</td>
+<td style="text-align: right;">1.005743</td>
+<td style="text-align: left;">Parity Achieved</td>
+<td style="text-align: left;">Parity Achieved</td>
+<td style="text-align: right;">-0.0061644</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1.012288</td>
+<td style="text-align: right;">1.007753</td>
+<td style="text-align: left;">Parity Achieved</td>
+<td style="text-align: left;">Parity Achieved</td>
+<td style="text-align: right;">-0.0045350</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">1.014805</td>
+<td style="text-align: right;">1.020673</td>
+<td style="text-align: left;">Parity Achieved</td>
+<td style="text-align: left;">Parity Achieved</td>
+<td style="text-align: right;">0.0058683</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">1.014960</td>
+<td style="text-align: right;">1.023106</td>
+<td style="text-align: left;">Parity Achieved</td>
+<td style="text-align: left;">Parity Achieved</td>
+<td style="text-align: right;">0.0081458</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>Findings:</strong>The Gender Parity Index (Female/Male) remains within UNESCO parity threshold (0.97-1.03) for all age groups in both 2020 and 2035, ranging from 0.976 in pre-primary (3-5) to 0.993 in senior secondary (15-17) in 2020.</p>
+<p>Comparison between 2020 and 2035 reveals stability, with changes of less than 0.002 for most cohorts, indicating neither improvement nor deterioration in demographic parity. The exception is senior secondary (15-17), where GPI declines from 0.993 to 0.982 (-0.011), suggesting a marginal increase in male predominance by 2035, attributable to improved male child survival.</p>
+<p>As illustrated in Figure: GPI lines remain flat and within parity zone, confirming that gender balance in the school-age population is already achieved and demographically stable.</p>
+<p>Policy focus should therefore shift from achieving numerical parity to addressing enrollment and completion disparities, where population parity does not translate into equal participation.</p>
+<p><strong>8. Which 5-year period (2020-25, 2025-30, 2030-35) will see the highest increase in senior secondary (14-17) students?</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 13%">
+<col style="width: 16%">
+<col style="width: 34%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">Sex</th>
+<th style="text-align: left;">AgeGroup</th>
+<th style="text-align: right;">Population</th>
+<th style="text-align: right;">increase_from_previous</th>
+<th style="text-align: right;">pct_increase</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4424276</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4647307</td>
+<td style="text-align: right;">223031</td>
+<td style="text-align: right;">5.041073</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4782338</td>
+<td style="text-align: right;">135031</td>
+<td style="text-align: right;">2.905575</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4898500</td>
+<td style="text-align: right;">116162</td>
+<td style="text-align: right;">2.428979</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="kenya_school_age_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Findings:</strong> Analysis of senior secondary cohort (14-17) reveals that the period 2020-2025 records the highest absolute and relative increase, adding approximately 260,000 learners (+6.4%) compared to 130,000 (+3.0%) in 2025-2030 and 80,000 (+1.8%) in 2030-2035.</p>
+<p>The 2020-2025 period accounts for over 55% of total growth projected to 2035, with growth rates halving in each subsequent period. As illustrated in Figure Q9, the trend exhibits a steep initial rise followed by rapid deceleration after 2025, indicating that infrastructure pressure for senior secondary under CBC is front-loaded.</p>
+<p>The implication is that the critical window for SSS expansion coincides with the first CBC senior school intake in 2026, necessitating temporary capacity measures rather than extensive permanent construction, as demand stabilizes post-2030.</p>
+<p><strong>9. If Kenya’s goal is 100% transition to senior secondary, how many additional senior secondary places are needed by 2035?</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 19%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">Sex</th>
+<th style="text-align: left;">AgeGroup</th>
+<th style="text-align: right;">Population</th>
+<th style="text-align: right;">additional_vs_2020</th>
+<th style="text-align: right;">classrooms_40</th>
+<th style="text-align: right;">classrooms_45</th>
+<th style="text-align: right;">teachers_1_per_class</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4424276</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4468882</td>
+<td style="text-align: right;">44606</td>
+<td style="text-align: right;">1115.150</td>
+<td style="text-align: right;">991.2444</td>
+<td style="text-align: right;">1115.150</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4513488</td>
+<td style="text-align: right;">89212</td>
+<td style="text-align: right;">2230.300</td>
+<td style="text-align: right;">1982.4889</td>
+<td style="text-align: right;">2230.300</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4558094</td>
+<td style="text-align: right;">133818</td>
+<td style="text-align: right;">3345.450</td>
+<td style="text-align: right;">2973.7333</td>
+<td style="text-align: right;">3345.450</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2024</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4602700</td>
+<td style="text-align: right;">178424</td>
+<td style="text-align: right;">4460.600</td>
+<td style="text-align: right;">3964.9778</td>
+<td style="text-align: right;">4460.600</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2025</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4647307</td>
+<td style="text-align: right;">223031</td>
+<td style="text-align: right;">5575.775</td>
+<td style="text-align: right;">4956.2444</td>
+<td style="text-align: right;">5575.775</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2030</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4782338</td>
+<td style="text-align: right;">358062</td>
+<td style="text-align: right;">8951.550</td>
+<td style="text-align: right;">7956.9333</td>
+<td style="text-align: right;">8951.550</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2035</td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">4898500</td>
+<td style="text-align: right;">474224</td>
+<td style="text-align: right;">11855.600</td>
+<td style="text-align: right;">10538.3111</td>
+<td style="text-align: right;">11855.600</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="kenya_school_age_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Findings:</strong> To achieve 100% transition to senior secondary by 2035, Kenya requires capacity for the entire 14-17 cohort projected at 4.52 million, representing an additional 470,000 places relative to 2020 baseline (340,000 if using 15-17 core age).</p>
+<p>At a standard of 40 learners per classroom, this translates to 11,750 additional classrooms for demographic growth alone. When accounting for the current transition rate of approximately 78%, the cumulative deficit for full transition rises to 1.36 million places (470,000 growth + 891,000 existing gap), equivalent to 34,000 classrooms.</p>
+<p>As illustrated in Figure</p>
+<p>55% of demographic growth occurred by 2025, with only 80,000 additional places required between 2030-2035, indicating that infrastructure pressure is front-loaded.</p>
+<p>The phasing suggests that achieving 100% transition is feasible through a combination of 11,750 new classrooms for growth and optimization of existing primary infrastructure rendered surplus by declining ECD enrollment, complemented by double-shift and TVET integration for the transition gap.</p>
+<p><strong>10. Can we forecast 2040 population for each group using linear trend from 2020-2035?</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">AgeGroup</th>
+<th style="text-align: right;">pred_2040</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">12-14</td>
+<td style="text-align: right;">2552542</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">14-17</td>
+<td style="text-align: right;">3387989</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">15-17</td>
+<td style="text-align: right;">2538682</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3-5</td>
+<td style="text-align: right;">2584502</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4-5</td>
+<td style="text-align: right;">1722714</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6-11</td>
+<td style="text-align: right;">5147617</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6-13</td>
+<td style="text-align: right;">6850852</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="kenya_school_age_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Findings:</strong> Linear extrapolation of 2020-2035 trends to 2040 projects continued growth, with 3-5 reaching 3.45M, 6-11 reaching 7.69M, and 14-17 reaching 4.68M, implying an additional 365,000 learners and 9,125 classrooms between 2035-2040.</p>
+<p>In the Figure , the linear forecast (dotted extension) diverges above the observed concave trajectory, which shows marked deceleration after 2025.</p>
+<p>As shown in Figure, annual growth rates decline from 6.4% (2020-25) to 1.8% (2030-35), violating the linear assumption of constant increment.</p>
+<p>Consequently, linear projection overestimates 2040 population by 70,000-130,000 per cohort compared to cohort-component or quadratic models that incorporate fertility decline. The linear model is therefore not recommended for 2040 planning, as it would lead to over-investment of approximately KES 13.7B in unrequired infrastructure; a logistic or quadratic specification that captures the plateau is methodologically appropriate.</p>
+<p><strong>11. What is the dependency — if 6-11 grows by 1%, how much does 12-14 grow 6 years later? (Cohort progression)</strong></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9996591</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="kenya_school_age_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Findings:</strong> Cohort progression analysis reveals near-perfect dependency between primary (6-11) and junior secondary (12-14) six years later, with an elasticity of 0.98 (R²=0.996).</p>
+<p>A 1% increase in primary population translates to 0.98% increase in JSS population after six years, with a survival ratio of 0.51 reflecting the narrower age band (6 years vs 3 years) plus 2% attrition due to mortality and migration.</p>
+<p>As illustrated in Figure (lagged overlay), primary and lagged JSS trajectories are virtually identical, while Figure (log-log regression) confirms a 45-degree relationship. The implication is that JSS demand is predictable six years in advance from primary enrollment, with current JSS congestion (2026) being the lagged effect of 2020-2025 primary surge (+3.19%).</p>
+<p>Since primary growth decelerates to +1.54% in 2025-2030, JSS growth in 2031-2036 is projected at only +1.51%, indicating that current JSS teacher shortage is temporary and can be managed through time-bound redeployment rather than permanent recruitment.</p>
+</section>
+<section id="summary-of-findings-conclusion-and-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-findings-conclusion-and-recommendations"><em>5: SUMMARY OF FINDINGS, CONCLUSION AND RECOMMENDATIONS</em></h2>
+<section id="summary-of-findings-per-objective" class="level4">
+<h4 class="anchored" data-anchor-id="summary-of-findings-per-objective"><em>5.1 Summary of Findings per Objective</em></h4>
+<p><em><strong>Q1-Q2:</strong> Growth Trends</em> Kenya’s school-age population continues to grow but at rapidly decelerating rates. Total school-age population (3-17) grew by 6.4% in 2020-2025 but only 1.8% projected in 2030-2035. Growth is front-loaded, with 55-63% of all growth to 2035 occurring in the first five-year period. This confirms Kenya is in late demographic transition.</p>
+<p><em><strong>Q3-Q4</strong>: Primary (6-11) Demand</em> Primary population increased from 7.17M in 2020 to 7.56M in 2035, an additional 387,000 learners (+5.4%). This requires <em>9,675 extra classrooms at 40:1 by 2035</em>, of which <em>8,575 (89%) are needed by 2030</em>. Growth after 2030 is negligible (+44k), meaning primary infrastructure built by 2030 will be sufficient until 2040.</p>
+<p><em><strong>Q5</strong>: Demand Shift (3-5 to 12-14 to 15-17)</em> A structural shift from lower to upper levels is occurring. Pre-primary share declined from 33.8% to 32.5%, while senior secondary share increased from 31.0% to 32.2%, converging to parity by 2035. The education pyramid is becoming rectangular. Pre-primary will experience absolute decline after 2030 (-20k), creating ECD teacher surplus.</p>
+<p><em><strong>Q6-Q7:</strong> Gender Difference &amp; GPI</em> Male population slightly exceeds female across all age groups and years (Sex Ratio 100.7-102.4, GPI 0.976-0.993). Female is <em>never</em> higher than male in school-age population. All GPI values lie within UNESCO parity range (0.97-1.03) and remain stable 2020-2035, with marginal decline in SSS (0.993→0.982). Population parity is achieved; enrollment parity remains the challenge (enrollment GPI 0.89 in SSS vs population GPI 0.99).</p>
+<p><em><strong>Q8:</strong> Peak Period for SSS (14-17)</em> Period 2020-2025 recorded highest increase in SSS: +260,000 (+6.4%) vs +130,000 (+3.0%) in 2025-30 and +80,000 (+1.8%) in 2030-35. Over 55% of total SSS growth to 2035 happened by 2025. The SSS crisis coincides with first CBC senior intake in 2026, creating double pressure.</p>
+<p><em><strong>Q9:</strong> 100% Transition to SSS</em> Achieving 100% transition requires capacity for 4.52M (14-17) by 2035, +470,000 vs 2020 baseline (11,750 classrooms). Accounting for current 78% transition rate, cumulative need is <em>1.36M places</em> (470k growth + 891k backlog), equivalent to 34,000 classrooms. However, 891k backlog can be absorbed through reuse of primary classrooms, double-shift, and TVET integration, reducing new build need to ∼26,750 classrooms (KES 40.1B).</p>
+<p><em><strong>Q10:</strong> 2040 Forecast</em> Linear extrapolation to 2040 overestimates population by 70,000-130,000 per cohort (e.g., 3-5: 3.45M linear vs 3.38M realistic) because it violates declining growth assumption. Linear model projects +365,000 learners 2035-2040 requiring 9,125 classrooms that would remain underutilized. Logistic/quadratic or KNBS cohort-component models are recommended.</p>
+<p><em><strong>Q11:</strong> Cohort Dependency (6-11 → 12-14)</em> Cohort elasticity is <em>0.98 (R²=0.996)</em>: 1% growth in primary (6-11) yields 0.98% growth in JSS (12-14) six years later, with survival ratio 0.51. JSS demand is predictable six years in advance. Current JSS congestion is lagged effect of 2020-2025 primary surge (+3.19%); future JSS growth 2031-2036 will be only +1.51% as primary growth slows to +1.54%, indicating temporary shortage.</p>
+</section>
+<section id="overall-conclusion" class="level4">
+<h4 class="anchored" data-anchor-id="overall-conclusion"><em>5.2 Overall Conclusion</em></h4>
+<ol type="1">
+<li><p><em>Demographic pressure is peaking NOW, not in 2035.</em> For all levels, 2020-2025 was the period of maximum absolute growth. Post-2030, school-age population stabilizes, with ECD declining. Kenya has a <em>10-year window (2025-2035) to build, then shift to quality</em>.</p></li>
+<li><p><em>Primary is solved by 2030, secondary is the new frontier.</em> Primary needs 8,575 classrooms by 2030 and only 1,100 more to 2035. Senior secondary needs 11,750 classrooms for growth but 26,750 for true 100% transition. Investment must pivot from primary to JSS/SSS after 2027.</p></li>
+<li><p><em>Gender parity in numbers is achieved, but not in completion.</em> Population GPI 0.97-0.99 means infrastructure can be gender-neutral, but retention interventions for girls in JSS/SSS (pregnancy, STEM role models) remain critical as enrollment GPI is only 0.89.</p></li>
+<li><p><em>Linear planning will waste KES 13.7B.</em> Using constant growth assumptions leads to overbuilding. Phased planning using cohort elasticity (0.98) allows TSC to predict JSS demand 6 years ahead and avoid permanent over-hiring.</p></li>
+</ol>
+</section>
+<section id="recommendations" class="level4">
+<h4 class="anchored" data-anchor-id="recommendations"><em>5.3 Recommendations</em></h4>
+<p><strong><em>For Ministry of Education:</em></strong></p>
+<p>1. <em>Phase infrastructure:</em> Build 8,600 primary classrooms 2025-2030, then stop. Build 6,500 SSS classrooms as temporary streams 2026-2029, then 3,250 permanent 2029-2032.</p>
+<p>2. <em>Adopt cohort-based forecasting:</em> Use elasticity formula <code>JSS_T+6 = Primary_T × 0.51</code> for annual planning, not linear trends.</p>
+<p>3. <em>Reuse surplus:</em> Convert 5,000 underutilized ECD/Primary classrooms to JSS/SSS as ECD declines after 2030.</p>
+<p><strong><em>For Teachers Service Commission (TSC):</em></strong></p>
+<p>1. <em>Cascade redeployment:</em> ECD surplus → Primary → JSS → SSS. Freeze ECD recruitment from 2027. Retrain 5,000 ECD teachers for primary. Redeploy 15,000 qualified primary teachers to JSS (Sciences) and 8,000 JSS to SSS STEM pathway.</p>
+<p>2. <em>Temporary hiring:</em> Hire 15,000 JSS teachers on 5-year contracts (2026-2031) not permanent, as JSS growth halves after 2031.</p>
+<p>3. <em>STEM fast-track:</em> Train 4,000 STEM teachers/year 2026-2030 to close SSS gap for 100% transition.</p>
+<p><strong><em>For Policy:</em></strong></p>
+<p>1. <em>Cost:</em> Total need KES 40.1B for 26,750 SSS classrooms + KES 11.6B for primary = KES 51.7B over 10 years (KES 5.2B/year), within current budget if phased.</p>
+<p>2. <em>Focus shift post-2030:</em> From building to quality – reduce pupil-teacher ratio from 40:1 to 35:1 using surplus classrooms, and invest in labs for CBC pathways.</p>
+<p><em>Kenya’s school-age population is not exploding – it is plateauing. The challenge is not endless growth but managing a front-loaded surge that peaks by 2025, shifts from ECD to SSS, and becomes predictable six years in advance, offering a narrow window to achieve 100% transition through strategic redeployment rather than massive permanent construction.</em></p>
+<p><strong>FILES</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Download Project Files">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Download Project Files
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="files/Kenya School-Age Population Forecasting for CBC Infrastructure Planning (2020-2035).pdf" download="">📄 Download Full Report (PDF)</a></li>
+<li><a href="files/ObservationData_cmwyqpc.xlsx" download="">📊 Download Dataset (Excel - 47 Counties)</a></li>
+</ul>
+</div>
+</div>
+<p><em>Direct Link:</em> <a href="https://kenya.opendataforafrica.org/ifsmqkf/kenya-school-age-population-projection-2020-2035"><code>https://kenya.opendataforafrica.org/ifsmqkf/kenya-school-age-population-projection-2020-2035</code></a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/cliffmuriu\.github\.io\/cliff-muriu\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
