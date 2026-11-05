@@ -1,1 +1,114 @@
 /* css styles */
+/* SIDEBAR STYLE */
+.sidebar {
+  background-color: #f8f9ff;
+  border-right: 1px solid #e9ecef;
+}
+
+.sidebar .sidebar-item a {
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+}
+
+.sidebar .sidebar-item a:hover {
+  background-color: #1e6fd1;
+  color: white !important;
+}
+
+.sidebar .sidebar-item a.active {
+  background-color: #1e6fd1;
+  color: white !important;
+  font-weight: 600;
+}
+
+.navbar {
+  background-color: #1e6fd1 !important;
+}
+
+h3 {
+  margin-top: 1.8em;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.3em;
+}
+
+body {
+  line-height: 1.7;
+}
+
+/* ========================= */
+/* REALISTIC SEARCH BAR */
+/* ========================= */
+.aa-Form, #quarto-search {
+  border-radius: 24px !important;
+  background-color: black !important;
+  border: 1px solid #dee2e6 !important;
+  height: 42px !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
+  transition: all 0.2s ease !important;
+}
+
+.aa-Form:focus-within, #quarto-search:focus {
+  background-color: white !important;
+  border-color: #1e6fd1 !important;
+  box-shadow: 0 0 0 3px rgba(30,111,209,0.15) !important;
+}
+
+.aa-Input {
+  font-size: 15px !important;
+}
+
+/* Search icon button in navbar - make it a pill */
+.navbar .quarto-search {
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 4px 14px !important;
+  transition: all 0.2s;
+}
+
+.navbar .quarto-search:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ========================= */
+/* REALISTIC DARK MODE TOGGLE */
+/* ========================= */
+.quarto-color-scheme-toggle {
+  background-color: #0d2a54 !important;
+  border-radius: 50px !important;
+  width: 52px !important;
+  height: 28px !important;
+  position: relative !important;
+  border: 2px solid rgba(255,255,255,0.3) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 2px !important;
+  transition: all 0.3s ease !important;
+}
+
+.quarto-color-scheme-toggle i.bi {
+  background: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px !important;
+  color: #1e6fd1 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) !important;
+  margin-left: 2px;
+}
+
+/* When in dark mode, slide to right */
+.quarto-color-scheme-toggle.alternate i.bi {
+  transform: translateX(22px) !important;
+  color: #f1c40f !important;
+}
+
+.quarto-color-scheme-toggle:hover {
+  transform: scale(1.05);
+  border-color: white !important;
+}
