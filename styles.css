@@ -1,4 +1,5 @@
 /* css styles */
+/* SIDEBAR STYLE */
 .sidebar {
   background-color: #f8f9ff;
   border-right: 1px solid #e9ecef;
@@ -35,53 +36,79 @@ body {
   line-height: 1.7;
 }
 
-/* === FIX: HIDE BROKEN SEARCH PILL IN SIDEBAR === */
-#quarto-search, .sidebar-search, .aa-Form {
-  display: none !important;
+/* ========================= */
+/* REALISTIC SEARCH BAR */
+/* ========================= */
+.aa-Form, #quarto-search {
+  border-radius: 24px !important;
+  background-color: black !important;
+  border: 1px solid #dee2e6 !important;
+  height: 42px !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
+  transition: all 0.2s ease !important;
 }
 
-/* === FIX: REMOVE GREY DIM OVERLAY ON PHONE === */
-.quarto-sidebar-glass {
-  display: none !important;
+.aa-Form:focus-within, #quarto-search:focus {
+  background-color: white !important;
+  border-color: #1e6fd1 !important;
+  box-shadow: 0 0 0 3px rgba(30,111,209,0.15) !important;
 }
 
-/* === NAVBAR SEARCH AND TOGGLE REALISTIC === */
+.aa-Input {
+  font-size: 15px !important;
+}
+
+/* Search icon button in navbar - make it a pill */
 .navbar .quarto-search {
-  background: rgba(255,255,255,0.18) !important;
-  border-radius: 20px !important;
-  padding: 6px 14px !important;
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 4px 14px !important;
+  transition: all 0.2s;
 }
 
+.navbar .quarto-search:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ========================= */
+/* REALISTIC DARK MODE TOGGLE */
+/* ========================= */
 .quarto-color-scheme-toggle {
-  background: #0a2a5a !important;
+  background-color: #0d2a54 !important;
   border-radius: 50px !important;
   width: 52px !important;
   height: 28px !important;
-  border: 2px solid rgba(255,255,255,0.4) !important;
+  position: relative !important;
+  border: 2px solid rgba(255,255,255,0.3) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 2px !important;
+  transition: all 0.3s ease !important;
 }
 
-.quarto-color-scheme-toggle i {
-  background: white !important;
-  width: 20px !important;
-  height: 20px !important;
-  border-radius: 50% !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+.quarto-color-scheme-toggle i.bi {
+  background: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px !important;
+  color: #1e6fd1 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) !important;
+  margin-left: 2px;
 }
 
-/* === PHONE RESPONSIVE FIX === */
-@media screen and (max-width: 768px) {
-  .sidebar.collapse:not(.show) {
-    display: none !important;
-  }
-  .quarto-layout-row {
-    flex-direction: column !important;
-  }
+/* When in dark mode, slide to right */
+.quarto-color-scheme-toggle.alternate i.bi {
+  transform: translateX(22px) !important;
+  color: #f1c40f !important;
 }
 
-/* css styles */
-/* SIDEBAR STYLE */
-.sidebar {
-  background-color: #f8f9ff;
-  border-right: 1px solid #e9ecef;
+.quarto-color-scheme-toggle:hover {
+  transform: scale(1.05);
+  border-color: white !important;
 }
- 
