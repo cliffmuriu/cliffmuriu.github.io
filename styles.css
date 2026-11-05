@@ -1,4 +1,84 @@
 /* css styles */
+.sidebar {
+  background-color: #f8f9ff;
+  border-right: 1px solid #e9ecef;
+}
+
+.sidebar .sidebar-item a {
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+}
+
+.sidebar .sidebar-item a:hover {
+  background-color: #1e6fd1;
+  color: white !important;
+}
+
+.sidebar .sidebar-item a.active {
+  background-color: #1e6fd1;
+  color: white !important;
+  font-weight: 600;
+}
+
+.navbar {
+  background-color: #1e6fd1 !important;
+}
+
+h3 {
+  margin-top: 1.8em;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.3em;
+}
+
+body {
+  line-height: 1.7;
+}
+
+/* === FIX: HIDE BROKEN SEARCH PILL IN SIDEBAR === */
+#quarto-search, .sidebar-search, .aa-Form {
+  display: none !important;
+}
+
+/* === FIX: REMOVE GREY DIM OVERLAY ON PHONE === */
+.quarto-sidebar-glass {
+  display: none !important;
+}
+
+/* === NAVBAR SEARCH AND TOGGLE REALISTIC === */
+.navbar .quarto-search {
+  background: rgba(255,255,255,0.18) !important;
+  border-radius: 20px !important;
+  padding: 6px 14px !important;
+}
+
+.quarto-color-scheme-toggle {
+  background: #0a2a5a !important;
+  border-radius: 50px !important;
+  width: 52px !important;
+  height: 28px !important;
+  border: 2px solid rgba(255,255,255,0.4) !important;
+}
+
+.quarto-color-scheme-toggle i {
+  background: white !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+/* === PHONE RESPONSIVE FIX === */
+@media screen and (max-width: 768px) {
+  .sidebar.collapse:not(.show) {
+    display: none !important;
+  }
+  .quarto-layout-row {
+    flex-direction: column !important;
+  }
+}
+
+/* css styles */
 /* SIDEBAR STYLE */
 .sidebar {
   background-color: #f8f9ff;
