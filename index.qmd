@@ -1,18 +1,27 @@
 ---
 title: "Cliff Muriu"
-subtitle: "Data Analyst| Business Insights"
+subtitle: "Data Analyst | Business Intelligence | R & Power BI"
 about:
   template: trestles
+  image: profile.jpeg
+  image-width: 16em
+  image-shape: round
   links:
     - icon: github
       text: GitHub
       href: https://github.com/cliffmuriu
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/cliffmuriu
     - icon: envelope
       text: Email
-      href: mailto:cliffmuriu01@gmmail.com
+      href: mailto:cliffmuriu01@gmail.com
     - icon: whatsapp
       text: WhatsApp
       href: https://wa.me/254742950424
+    - icon: file-earmark-person
+      text: Resume
+      href: files/CV_Cliff_Muriu.pdf 
 ---
 
 ## Hello, I'm Cliff Muriu
