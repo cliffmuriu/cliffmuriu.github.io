@@ -3,6 +3,8 @@ project:
   output-dir: _site
   resources:
     - files/*
+    - "profile.jpeg"
+    - "styles.css"
 
 website:
   title: "Cliff Muriu"
