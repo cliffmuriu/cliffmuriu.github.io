@@ -92,14 +92,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
-  "type": "overlay",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -119,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -297,20 +296,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text"> </span></a>
-  </li>  
-</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/cliffmuriu"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/cliffmuriu"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://linkedin.com/in/cliffmuriu"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://linkedin.com/in/cliffmuriu"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -341,19 +334,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🏠 Home</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">👤 About Me</span></a>
+ <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./projects.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">📊 Projects</span></a>
+ <span class="menu-text">Projects</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About Me</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -384,26 +377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
-  <ul class="collapse">
-  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
-  <li><a href="#data-loading-checking" id="toc-data-loading-checking" class="nav-link" data-scroll-target="#data-loading-checking">Data Loading &amp; Checking</a></li>
-  </ul></li>
-  <li><a href="#load-dataset---use-relative-path-for-website" id="toc-load-dataset---use-relative-path-for-website" class="nav-link" data-scroll-target="#load-dataset---use-relative-path-for-website">Load dataset - USE RELATIVE PATH FOR WEBSITE</a></li>
-  <li><a href="#check-structure---should-be-47-rows-6-cols" id="toc-check-structure---should-be-47-rows-6-cols" class="nav-link" data-scroll-target="#check-structure---should-be-47-rows-6-cols">Check structure - should be 47 rows, 6 cols</a>
-  <ul class="collapse">
-  <li><a href="#question-1-is-rift-valley-production-higher" id="toc-question-1-is-rift-valley-production-higher" class="nav-link" data-scroll-target="#question-1-is-rift-valley-production-higher">Question 1: Is Rift Valley Production Higher?</a></li>
-  <li><a href="#question-2-relationship-between-rainfall-and-yield" id="toc-question-2-relationship-between-rainfall-and-yield" class="nav-link" data-scroll-target="#question-2-relationship-between-rainfall-and-yield">Question 2: Relationship Between Rainfall and Yield</a></li>
-  <li><a href="#question-3-multiple-regression-models" id="toc-question-3-multiple-regression-models" class="nav-link" data-scroll-target="#question-3-multiple-regression-models">Question 3: Multiple Regression Models</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 

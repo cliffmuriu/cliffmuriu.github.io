@@ -1,89 +1,101 @@
 /* css styles */
-/* SIDEBAR STYLE */
-.sidebar {
+
+/* ========================= */
+/* NAVBAR                    */
+/* ========================= */
+.navbar {
+  background-color: #1e6fd1 !important;
+}
+
+/* ========================= */
+/* TYPOGRAPHY                */
+/* ========================= */
+body {
+  line-height: 1.7;
+}
+
+h3 {
+  margin-top: 1.8em;
+  /* translucent grey works in both light and dark mode */
+  border-bottom: 2px solid rgba(128, 128, 128, 0.2);
+  padding-bottom: 0.3em;
+}
+
+/* ========================= */
+/* LEFT NAV SIDEBAR ONLY (.sidebar-navigation) so the right-hand Categories panel is not tinted */
+/* ========================= */
+.sidebar-navigation {
   background-color: #f8f9ff;
   border-right: 1px solid #e9ecef;
 }
 
-.sidebar .sidebar-item a {
+body.quarto-dark .sidebar-navigation {
+  background-color: #1a1d23;
+  border-right-color: #2e333b;
+}
+
+.sidebar-navigation .sidebar-item a {
   border-radius: 8px;
   padding: 8px 12px;
   transition: all 0.2s ease;
 }
 
-.sidebar .sidebar-item a:hover {
+.sidebar-navigation .sidebar-item a:hover,
+.sidebar-navigation .sidebar-item a.active {
   background-color: #1e6fd1;
   color: white !important;
 }
 
-.sidebar .sidebar-item a.active {
-  background-color: #1e6fd1;
-  color: white !important;
+.sidebar-navigation .sidebar-item a.active {
   font-weight: 600;
 }
 
-.navbar {
-  background-color: #1e6fd1 !important;
-}
-
-h3 {
-  margin-top: 1.8em;
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 0.3em;
-}
-
-body {
-  line-height: 1.7;
-}
-
 /* ========================= */
-/* REALISTIC SEARCH BAR */
+/* SEARCH                    */
 /* ========================= */
-.aa-Form, #quarto-search {
-  border-radius: 24px !important;
-  background-color: black !important;
-  border: 1px solid #dee2e6 !important;
-  height: 42px !important;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
-  transition: all 0.2s ease !important;
+
+/* The search button sitting in the navbar: a translucent pill */
+#quarto-search .aa-DetachedSearchButton {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 0 14px;
+  transition: background 0.2s ease;
 }
 
-.aa-Form:focus-within, #quarto-search:focus {
-  background-color: white !important;
+#quarto-search .aa-DetachedSearchButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* The search box inside the pop-up: rounded, but keeps theme colours
+   so typed text stays readable in light AND dark mode */
+.aa-Form {
+  border-radius: 24px;
+  transition: all 0.2s ease;
+}
+
+.aa-Form:focus-within {
   border-color: #1e6fd1 !important;
-  box-shadow: 0 0 0 3px rgba(30,111,209,0.15) !important;
+  box-shadow: 0 0 0 3px rgba(30, 111, 209, 0.15) !important;
 }
 
 .aa-Input {
-  font-size: 15px !important;
-}
-
-/* Search icon button in navbar - make it a pill */
-.navbar .quarto-search {
-  background: rgba(255,255,255,0.15);
-  border-radius: 20px;
-  padding: 4px 14px !important;
-  transition: all 0.2s;
-}
-
-.navbar .quarto-search:hover {
-  background: rgba(255,255,255,0.25);
+  font-size: 15px;
 }
 
 /* ========================= */
-/* REALISTIC DARK MODE TOGGLE */
+/* DARK MODE TOGGLE          */
 /* ========================= */
 .quarto-color-scheme-toggle {
   background-color: #0d2a54 !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
   border-radius: 50px !important;
   width: 52px !important;
   height: 28px !important;
-  position: relative !important;
-  border: 2px solid rgba(255,255,255,0.3) !important;
+  padding: 2px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: flex-start !important;
-  padding: 2px !important;
   transition: all 0.3s ease !important;
 }
 
@@ -95,20 +107,49 @@ body {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  font-size: 12px !important;
-  color: #1e6fd1 !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) !important;
   margin-left: 2px;
 }
 
-/* When in dark mode, slide to right */
+/* Dark mode active: knob slides right */
 .quarto-color-scheme-toggle.alternate i.bi {
   transform: translateX(22px) !important;
-  color: #f1c40f !important;
 }
 
 .quarto-color-scheme-toggle:hover {
   transform: scale(1.05);
   border-color: white !important;
+}
+
+/* ========================= */
+/* INLINE SEARCH BOX (type: textbox) */
+/* ========================= */
+#quarto-search.type-textbox .aa-Form {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 24px;
+}
+
+#quarto-search.type-textbox .aa-Input,
+#quarto-search.type-textbox .aa-Input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#quarto-search.type-textbox .aa-SubmitIcon {
+  fill: white;
+}
+
+/* When typing: white box with dark text */
+#quarto-search.type-textbox .aa-Form:focus-within {
+  background: white;
+}
+
+#quarto-search.type-textbox .aa-Form:focus-within .aa-Input {
+  color: #212529;
+}
+
+#quarto-search.type-textbox .aa-Form:focus-within .aa-SubmitIcon {
+  fill: #1e6fd1;
 }
