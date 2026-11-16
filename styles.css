@@ -153,3 +153,27 @@ body.quarto-dark .sidebar-navigation {
 #quarto-search.type-textbox .aa-Form:focus-within .aa-SubmitIcon {
   fill: #1e6fd1;
 }
+
+/* ========================= */
+/* MOBILE: hamburger button  */
+/* ========================= */
+/* Removes the heavy white box that stays after tapping on a phone
+   (keyboard focus rings are kept for accessibility) */
+.navbar-toggler:focus:not(:focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+/* ========================= */
+/* PHONE / TABLET: one menu  */
+/* ========================= */
+/* Below 992px Quarto turns the docked sidebar into a slide-out menu.
+   Hide the navbar's own hamburger + link list there so the top bar stays
+   one slim row (name, dark toggle, search). GitHub/LinkedIn are in the
+   sidebar's Contact section for phones. */
+@media (max-width: 991.98px) {
+  .navbar-toggler,
+  .navbar .navbar-nav {
+    display: none !important;
+  }
+}
